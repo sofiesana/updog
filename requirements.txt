@@ -4,3 +4,5 @@ pillow
 ipython
 pycocotools
 matplotlib
+torch
+torchvision
