@@ -1,0 +1,6 @@
+fiftyone
+numpy
+pillow
+ipython
+pycocotools
+matplotlib
