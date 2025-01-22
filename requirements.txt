@@ -6,3 +6,4 @@ pycocotools
 matplotlib
 torch
 torchvision
+jupyter # for experimentation
