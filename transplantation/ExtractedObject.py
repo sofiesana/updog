@@ -3,6 +3,7 @@ import pickle as pkl
 from PIL import Image
 from utils import display, log_entry
 import json
+import numpy as np
 
 class ExtractedObject():
   def __init__(self, log_file_path):
@@ -78,3 +79,6 @@ class ExtractedObject():
     location = os.path.join(location_folder, f'mask_{self.class_label}_{self.id}.jpg')
     image = Image.fromarray(self.mask)
     image.save(location)
+
+
+
