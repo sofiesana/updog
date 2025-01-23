@@ -56,20 +56,30 @@ class ImageWithTransplantedObjects():
     generated_images = []
     image_width, image_height = self.modified_image.size
     obj_width, obj_height = obj.mask.shape[1], obj.mask.shape[0]
-    print(f"Image size: {image_width}x{image_height}")
-    print(f"Object size: {obj_width}x{obj_height}")
 
     for y in range(0, image_height - obj_height + 1, stride):
       for x in range (0, image_width - obj_width + 1, stride):
-          print(f"Range for x: {range(0, image_width - obj_width + 1, stride)}")
           print(f"Placing object at ({x}, {y})")
+
+          # for saving the images, both as a png and as a pkl in unique folders
+          unique_save_location = os.path.join(
+              'transplantation/outputs/transplants_with_stride',
+              f'{self.transplanted_image_id}_x{x}_y{y}'
+          )
+
+          transplanted_images_folder = os.path.join(unique_save_location, 'transplanted_images')
+          transplanted_samples_folder = os.path.join(unique_save_location, 'transplanted_samples')
+          os.makedirs(transplanted_images_folder, exist_ok=True)
+          os.makedirs(transplanted_samples_folder, exist_ok=True)
+
           new_transplanted_image = ImageWithTransplantedObjects(
             sample = self.og_sample,
-            save_location = 'transplantation/outputs/transplants_with_stride',
+            save_location = unique_save_location,
             dataset_name = self.dataset_name
           )
 
           new_transplanted_image.add_transplanted_object(obj, (x,y))
+          new_transplanted_image.save_transplanted_image()
           generated_images.append(new_transplanted_image)
 
     return generated_images
