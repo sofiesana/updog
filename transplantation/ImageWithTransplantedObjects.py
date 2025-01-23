@@ -7,6 +7,7 @@ import numpy as np
 from utils import log_entry, get_next_id
 import pickle as pkl
 import json
+import fiftyone as fo
 
 class ImageWithTransplantedObjects():
   def __init__(self, sample, save_location, dataset_name, log_file="transplantation_log.json"):
@@ -20,7 +21,6 @@ class ImageWithTransplantedObjects():
     self.modified_image = self.og_image
     self.og_id = sample.id
     self.og_sample = sample
-    self.modified_sample = sample.copy()
     self.transplanted_image_id = f"{self.og_id}_{get_next_id("transplantation_ids.json")}"
     self.dataset_name = dataset_name
     self.transplantations = {}
@@ -35,6 +35,14 @@ class ImageWithTransplantedObjects():
     if not os.path.exists(location_folder):
       os.makedirs(location_folder)
     self.modified_sample_path = os.path.join(location_folder, f"transplanted_{self.og_id}.pkl")
+
+    self.modified_sample = fo.Sample(filepath=self.image_save_location)
+    self.setup_modified_sample()
+  
+  def setup_modified_sample(self):
+    self.modified_sample["ground_truth"] = self.og_sample["ground_truth"]
+    self.modified_sample.id = self.transplanted_image_id
+    self.modified_sample.metadata = self.og_sample.metadata
 
   def add_transplanted_object(self, obj, location):
     self.transplantation_counter += 1
@@ -87,10 +95,10 @@ class ImageWithTransplantedObjects():
         }
         self.modified_sample["ground_truth"].detections.append(new_detection)
         # need to see if this will work:
-        # print(self.modified_image["filepath"])
-        # self.modified_image["filepath"] = self.image_save_location
+        print(self.og_sample.filepath)
+        print(self.modified_sample.filepath)
         
-        print("original image:")
-        print(self.og_sample)
+        # print("original image:")
+        # print(self.og_sample)
         print("modified image:")
         print(self.modified_sample)
