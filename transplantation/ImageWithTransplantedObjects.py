@@ -29,12 +29,12 @@ class ImageWithTransplantedObjects():
     location_folder = os.path.join(self.save_location, f'transplanted_images')
     if not os.path.exists(location_folder):
       os.makedirs(location_folder)
-    self.image_save_location = os.path.join(location_folder, f'transplanted_image_{self.og_id}.jpg')
+    self.image_save_location = os.path.join(location_folder, f'transplanted_image_{self.transplanted_image_id}.jpg')
 
     location_folder = os.path.join(self.save_location, 'transplanted_samples', )
     if not os.path.exists(location_folder):
       os.makedirs(location_folder)
-    self.modified_sample_path = os.path.join(location_folder, f"transplanted_{self.og_id}.pkl")
+    self.modified_sample_path = os.path.join(location_folder, f"transplanted_{self.transplanted_image_id}.json")
 
     self.modified_sample = fo.Sample(filepath=self.image_save_location)
     self.setup_modified_sample()
@@ -55,6 +55,7 @@ class ImageWithTransplantedObjects():
   def save_transplanted_image(self):
     self.log_modified_image()
     self.save_image()
+    # self.save_sample_to_json()
 
   def log_modified_image(self):
     entry = {
@@ -94,11 +95,3 @@ class ImageWithTransplantedObjects():
             "mask": new_segmentation
         }
         self.modified_sample["ground_truth"].detections.append(new_detection)
-        # need to see if this will work:
-        print(self.og_sample.filepath)
-        print(self.modified_sample.filepath)
-        
-        # print("original image:")
-        # print(self.og_sample)
-        print("modified image:")
-        print(self.modified_sample)
