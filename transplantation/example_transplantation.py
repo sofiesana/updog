@@ -11,6 +11,10 @@ import pickle
 
 
 def main():
+    # delete "testing" dataset
+    if "testing" in fo.list_datasets():
+        fo.delete_dataset("testing")
+        
     save_location = 'transplantation/outputs'
     print("importing dataset")
     dataset = foz.load_zoo_dataset(
@@ -44,6 +48,11 @@ def main():
     new_image.add_transplanted_object(obj, (200, 200))
     new_image.display_transplanted_image()
     new_image.save_transplanted_image()
+
+    print(fo.list_datasets())
+    test_dataset = fo.load_dataset("testing")
+    session = fo.launch_app(test_dataset)
+    session.wait()
 
 if __name__ == "__main__":
     main()
