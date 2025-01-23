@@ -26,15 +26,14 @@ def main():
     print("extracting objects")
     obj_extract.extract_objects()
 
-
-    # new_image = ImageWithTransplantedObjects(sample, save_location)
-    # obj = ExtractedObject()
-    # obj.load_object(os.path.join(save_location, f'extracted_objects/elephant_{sample.id}.pkl'))
-    # obj.display_extracted_object()
-    # new_image.add_transplanted_object(obj, (0,0))
-    # new_image.add_transplanted_object(obj, (200, 200))
-    # new_image.display_transplanted_image()
-    # new_image.save_transplanted_image()
+    new_image = ImageWithTransplantedObjects(sample=sample, save_location=save_location, dataset_name="testing")
+    obj = ExtractedObject(log_file_path='transplantation/outputs/extracted_objects_log.json')
+    obj.load_object(os.path.join(save_location, f'extracted_objects/elephant_{sample.id}.pkl'))
+    obj.display_extracted_object()
+    new_image.add_transplanted_object(obj, (0,0))
+    new_image.add_transplanted_object(obj, (200, 200))
+    new_image.display_transplanted_image()
+    new_image.save_transplanted_image()
 
 if __name__ == "__main__":
     main()

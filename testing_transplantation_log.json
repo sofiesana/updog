@@ -1,0 +1,27 @@
+[
+    {
+        "679168327db12f83cc74f6e4_1": {
+            "original_image_id": "679168327db12f83cc74f6e4",
+            "image_file_location": "transplantation/outputs\\transplanted_images\\transplanted_image_679168327db12f83cc74f6e4.jpg",
+            "sample_save_location": "transplantation/outputs\\transplanted_samples\\transplanted_679168327db12f83cc74f6e4.pkl",
+            "transplantations": {
+                "1": {
+                    "object_id": "679168327db12f83cc74f6e4",
+                    "obj_file_location": "transplantation/outputs\\extracted_objects\\elephant_679168327db12f83cc74f6e4.pkl",
+                    "location": [
+                        0,
+                        0
+                    ]
+                },
+                "2": {
+                    "object_id": "679168327db12f83cc74f6e4",
+                    "obj_file_location": "transplantation/outputs\\extracted_objects\\elephant_679168327db12f83cc74f6e4.pkl",
+                    "location": [
+                        200,
+                        200
+                    ]
+                }
+            }
+        }
+    }
+]

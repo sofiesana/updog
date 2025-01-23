@@ -4,6 +4,21 @@ import matplotlib.pyplot as plt
 import json
 import os
 
+def get_next_id(tracker_file):
+    if os.path.exists(tracker_file):
+        with open(tracker_file, 'r') as f:
+            data = json.load(f)
+            last_id = data.get('last_id', 0)
+    else:
+        last_id = 0
+
+    next_id = last_id + 1
+
+    with open(tracker_file, 'w') as f:
+        json.dump({'last_id': next_id}, f)
+
+    return next_id
+
 def get_image(sample):
   original_image_path = sample.filepath
   img = Image.open(original_image_path)
