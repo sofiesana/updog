@@ -1,0 +1,10 @@
+fiftyone
+numpy
+pillow
+ipython
+pycocotools
+matplotlib
+torch
+torchvision
+jupyter # for experimentation
+pandas
