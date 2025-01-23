@@ -1,7 +1,7 @@
 import os
 import pickle as pkl
 from PIL import Image
-from utils import display
+from utils import display, log_entry
 import json
 
 class ExtractedObject():
@@ -34,18 +34,9 @@ class ExtractedObject():
       self.is_setup = True
     else:
       print("Setup failed: Object already setup")
-
-  def if_not_yet_logged(self):
-    if os.path.exists(self.log_file_path):
-      with open(self.log_file_path, 'r') as f:
-        log_data = json.load(f)
-      for entry in log_data:
-        if self.obj_id in entry:
-          return False
-    return True
   
   def log_object(self):
-    log_entry = {
+    entry = {
       f"{self.obj_id}": {
         "class_label": self.class_label,
         "og_image_id": self.id,
@@ -53,18 +44,8 @@ class ExtractedObject():
       }
     }
 
-    if os.path.exists(self.log_file_path):
-      with open(self.log_file_path, 'r') as f:
-        log_data = json.load(f)
-    else:
-      log_data = []
-
-    if self.if_not_yet_logged():
-      log_data.append(log_entry)
-      with open(self.log_file_path, 'w') as f:
-        json.dump(log_data, f, indent=4)
-    else:
-      print("Object already logged")
+    log_entry(self.log_file_path, entry, id=self.obj_id)
+    
 
   def save_object(self):
     with open(self.file_location, 'wb') as f:
