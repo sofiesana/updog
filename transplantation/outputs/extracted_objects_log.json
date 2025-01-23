@@ -1,0 +1,16 @@
+[
+    {
+        "person_679168327db12f83cc74f6e4": {
+            "class_label": "person",
+            "og_image_id": "679168327db12f83cc74f6e4",
+            "file_location": "transplantation/outputs\\extracted_objects\\person_679168327db12f83cc74f6e4.pkl"
+        }
+    },
+    {
+        "elephant_679168327db12f83cc74f6e4": {
+            "class_label": "elephant",
+            "og_image_id": "679168327db12f83cc74f6e4",
+            "file_location": "transplantation/outputs\\extracted_objects\\elephant_679168327db12f83cc74f6e4.pkl"
+        }
+    }
+]

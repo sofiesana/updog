@@ -5,7 +5,8 @@ from utils import display
 from ExtractedObject import ExtractedObject
 
 class MaskExtractor():
-  def __init__(self, box, mask, pixels, id, class_label, save_location):
+  def __init__(self, box, mask, pixels, id, class_label, save_location, object_log_file):
+    self.object_log_file = object_log_file
     self.box = box
     self.mask = mask
     self.pixels = pixels
@@ -85,7 +86,7 @@ class MaskExtractor():
     pass
 
   def save_extracted_object(self):
-    obj = ExtractedObject()
+    obj = ExtractedObject(log_file_path=self.object_log_file)
     obj.setup(self.mask, self.mask_with_pixels, self.id, self.class_label, self.box, self.box_in_pixels, self.save_location)
     obj.save_object()
     obj.save_mask_with_pixels_as_jpg()
