@@ -30,6 +30,10 @@ def main():
     obj = ExtractedObject(log_file_path='transplantation/outputs/extracted_objects_log.json')
     obj.load_object(os.path.join(save_location, f'extracted_objects/elephant_{sample.id}.pkl'))
 
+    # Scale down the object before transplantation
+    new_width = 80 
+    new_height = 80 
+    obj.scale_object(new_width, new_height)  
 
     # obj.display_extracted_object()
     # new_image.add_transplanted_object(obj, (0,0))

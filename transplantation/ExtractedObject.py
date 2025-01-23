@@ -81,4 +81,13 @@ class ExtractedObject():
     image.save(location)
 
 
+  def scale_object(self, new_width, new_height):
+    self.mask = Image.fromarray(self.mask)
+    self.mask = self.mask.resize((new_width, new_height), Image.Resampling.LANCZOS)
+    self.mask = np.array(self.mask)
 
+    self.mask_with_pixels = Image.fromarray(self.mask_with_pixels)
+    self.mask_with_pixels = self.mask_with_pixels.resize((new_width, new_height), Image.Resampling.LANCZOS)
+    self.mask_with_pixels = np.array(self.mask_with_pixels)
+
+    print(f"Object scaled to: {new_width}x{new_height}")
