@@ -11,9 +11,11 @@ import pickle
 
 
 def main():
-    # delete "testing" dataset to reset it, avoids duplicates or other issues.
-    # if "testing" in fo.list_datasets():
-    #     fo.delete_dataset("testing")
+    dataset_name = "testing"
+
+    # delete "testing" dataset
+    if "testing" in fo.list_datasets():
+        fo.delete_dataset(dataset_name)
         
     save_location = 'transplantation/outputs'
     print("importing dataset")
@@ -21,7 +23,7 @@ def main():
         "coco-2017",
         split="validation",
         label_types=["segmentations"],
-        max_samples = 2,
+        max_samples = 10,
         classes= 'elephant'
     )
     dataset.persistent = True
@@ -36,19 +38,19 @@ def main():
 
         # loop through the files in the extracted_objects folder
         for file in os.listdir(os.path.join(save_location, 'extracted_objects')):
-            if file.endswith(".pkl"):
-                obj = ExtractedObject(log_file_path='transplantation/outputs/extracted_objects_log.json')
-                obj.load_object(os.path.join(save_location, 'extracted_objects', file))
-                
-            new_image = ImageWithTransplantedObjects(sample=sample, save_location=save_location, dataset_name="testing")
+            obj = ExtractedObject(log_file_path='transplantation/outputs/extracted_objects_log.json')
+            obj.load_object(os.path.join(save_location, 'extracted_objects', file))
+        
+            new_image = ImageWithTransplantedObjects(sample=sample, save_location=save_location, dataset_name=dataset_name)
             new_image.add_transplanted_object(obj, (50,50))
-            new_image.display_transplanted_image()
+            # new_image.display_transplanted_image()
             new_image.save_transplanted_image()
-    return
 
-def view_dataset():
+    view_dataset(dataset_name)
+
+def view_dataset(dataset_name):
     print(fo.list_datasets())
-    test_dataset = fo.load_dataset("testing")
+    test_dataset = fo.load_dataset(dataset_name)
     print(len(test_dataset))
     print("Loaded dataset samples:", test_dataset)
     session = fo.launch_app(test_dataset)
