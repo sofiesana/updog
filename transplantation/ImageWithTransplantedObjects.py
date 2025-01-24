@@ -8,6 +8,7 @@ from utils import log_entry, get_next_id
 import pickle as pkl
 import json
 import fiftyone as fo
+import copy
 
 class ImageWithTransplantedObjects():
   def __init__(self, sample, save_location, dataset_name):
@@ -52,7 +53,8 @@ class ImageWithTransplantedObjects():
   
   def setup_modified_sample(self):
     self.modified_sample["new_id"] = self.transplanted_image_id
-    self.modified_sample["ground_truth"] = self.og_sample["ground_truth"]
+    # self.modified_sample["ground_truth"] = self.og_sample["ground_truth"]
+    self.modified_sample["ground_truth"] = copy.deepcopy(self.og_sample["ground_truth"])
     self.modified_sample.id = self.transplanted_image_id
     self.modified_sample.metadata = self.og_sample.metadata
 
@@ -67,11 +69,27 @@ class ImageWithTransplantedObjects():
   def transplant_with_sliding_window(self, obj, stride):
     generated_images = []
     image_width, image_height = self.modified_image.size
+    print("Image size: ", image_height, image_width)
     obj_width, obj_height = obj.mask.shape[1], obj.mask.shape[0]
 
     for y in range(0, image_height - obj_height + 1, stride):
       for x in range (0, image_width - obj_width + 1, stride):
           print(f"Placing object at ({x}, {y})")
+
+          overlap_exceeded = False
+          for detection in self.og_sample["ground_truth"].detections:
+            other_mask = detection.mask
+            other_bbox = detection.bounding_box
+
+            if obj.check_for_overlap(image_width, image_height, other_mask, other_bbox, x, y):
+              overlap_exceeded = True
+              print("Skipping transplant due to overlap")
+              break
+
+          print()
+          
+          if overlap_exceeded == True:
+            continue
 
           # for saving the images, both as a png and as a pkl in unique folders
           unique_save_location = os.path.join(
@@ -85,9 +103,9 @@ class ImageWithTransplantedObjects():
           os.makedirs(transplanted_samples_folder, exist_ok=True)
 
           new_transplanted_image = ImageWithTransplantedObjects(
-            sample = self.og_sample,
-            save_location = unique_save_location,
-            dataset_name = self.dataset_name
+              sample=self.og_sample, #new_sample,
+              save_location=unique_save_location,
+              dataset_name=self.dataset_name
           )
 
           new_transplanted_image.add_transplanted_object(obj, (x,y))
