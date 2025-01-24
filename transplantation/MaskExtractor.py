@@ -53,8 +53,10 @@ class MaskExtractor():
 
   def pixel_is_not_masked(self, x, y):
     x_coord, y_coord = self.get_new_x_y(x, y)
-    if x_coord < self.mask.shape[1] and y_coord < self.mask.shape[0]:
-      return self.mask[y_coord, x_coord]
+    if 0 <= x_coord < self.mask.shape[1] and 0 <= y_coord < self.mask.shape[0]:
+        return self.mask[y_coord, x_coord]
+    else:
+        return False
 
   def filter_pixels(self, x, y):
     if not self.pixel_in_box(x, y):
