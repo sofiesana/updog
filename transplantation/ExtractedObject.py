@@ -4,6 +4,7 @@ from PIL import Image
 from utils import display, log_entry
 import json
 import numpy as np
+from utils import get_next_id
 
 class ExtractedObject():
   def __init__(self, log_file_path):
@@ -17,6 +18,7 @@ class ExtractedObject():
     self.save_location = None
     self.is_setup = False
     self.file_location = None
+    self.obj_id = None
 
   def setup(self, mask, mask_with_pixels, id, class_label, box, box_in_pixels, save_location):
     if not self.is_setup:
@@ -30,8 +32,15 @@ class ExtractedObject():
       location_folder = os.path.join(self.save_location, f'extracted_objects')
       if not os.path.exists(location_folder):
         os.makedirs(location_folder)
-      self.file_location = os.path.join(location_folder, f'{self.class_label}_{self.id}.pkl')
+      
       self.obj_id = f'{self.class_label}_{self.id}'
+      self.file_location = os.path.join(location_folder, f'{self.obj_id}.pkl')
+      
+      #check if file_location already exists
+      if os.path.exists(self.file_location):
+        self.obj_id = f'{self.obj_id}_{get_next_id("extracted_objects_ids.json")}'
+        self.file_location = os.path.join(location_folder, f'{self.obj_id}.pkl')
+      
       self.is_setup = True
     else:
       print("Setup failed: Object already setup")
