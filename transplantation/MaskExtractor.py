@@ -5,7 +5,7 @@ from utils import display
 from ExtractedObject import ExtractedObject
 
 class MaskExtractor():
-  def __init__(self, box, mask, pixels, id, obj_id, class_label, save_location, object_log_file, filter=False, filter_ratio=0.05):
+  def __init__(self, box, mask, pixels, id, obj_id, class_label, save_location, object_log_file, filter=False, min_filter_ratio=0.05, max_filter_ratio=0.8, filter_type="both"):
     self.object_log_file = object_log_file
     self.box = box
     self.mask = mask
@@ -16,7 +16,9 @@ class MaskExtractor():
     self.class_label = class_label
     self.save_location = save_location
     self.filter = filter
-    self.filter_ratio = filter_ratio
+    self.min_filter_ratio = min_filter_ratio
+    self.max_filter_ratio = max_filter_ratio
+    self.filter_type = filter_type
 
     # Getting all the dimensions
     self.top_left_x, self.top_left_y, self.width, self.height = box
@@ -103,6 +105,9 @@ class MaskExtractor():
   def filter_extracted_object_based_on_ratio(self):
     obj_area = self.mask.shape[0] * self.mask.shape[1]
     img_area = np.prod(self.pixels.shape)
-    if obj_area < (img_area * self.filter_ratio):
+    if (self.filter_type == "both" or self.filter_type == "min") and obj_area < (img_area * self.min_filter_ratio):
       print("Object too small, skipping id:", self.obj_id)
+      return True
+    if (self.filter_type == "both" or self.filter_type == "max") and obj_area > (img_area * self.max_filter_ratio):
+      print("Object too big, skipping id:", self.obj_id)
       return True
