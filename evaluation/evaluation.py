@@ -8,20 +8,13 @@ if __name__ == "__main__":
     model = foz.load_zoo_model('faster-rcnn-resnet50-fpn-coco-torch')
 
     print("importing dataset")
-    dataset = foz.load_zoo_dataset(
-        "coco-2017",
-        split="validation",
-        label_types=["segmentations"],
-        max_samples = 20,
-        classes= 'elephant'
-    )
-    dataset.persistent = True
+    dataset = fo.load_dataset("testing")
     
     logger = logging.getLogger("fiftyone.utils.eval.detection")
     logger.setLevel(logging.WARNING)
 
-    max_images = 3
-    num_trans_per_og = 2
+    max_images = 2
+    num_trans_per_og = 1
 
     og_images = dataset[:1] # Placeholder datasets right now
     transplanted_images = dataset[:2] # Will change when we got the datasets

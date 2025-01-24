@@ -2,3 +2,6 @@
 __pycache__/
 # ignore .vscode folder
 .vscode/
+# ignore just_in_case.py
+transplantation/just_in_case.py
+output.txt

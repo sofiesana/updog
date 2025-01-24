@@ -59,3 +59,8 @@ def is_not_yet_logged(log_file_path, id):
         if id in entry:
           return False
     return True
+
+def load_sample_from_json(filepath):
+    with open(filepath, 'r') as f:
+        sample_dict = json.load(f)
+    return fo.Sample.from_dict(sample_dict)
