@@ -28,9 +28,9 @@ def main():
 
     sample = dataset.first()
 
-    # obj_extract = ImageObjectExtractor(sample, save_location=save_location, object_log_file='transplantation/outputs/extracted_objects_log.json')
-    # print("extracting objects")
-    # obj_extract.extract_objects()
+    obj_extract = ImageObjectExtractor(sample, save_location=save_location, object_log_file='transplantation/outputs/extracted_objects_log.json')
+    print("extracting objects")
+    obj_extract.extract_objects()
 
     new_image = ImageWithTransplantedObjects(sample=sample, save_location=save_location, dataset_name="testing")
     obj = ExtractedObject(log_file_path='transplantation/outputs/extracted_objects_log.json')

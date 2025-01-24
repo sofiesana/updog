@@ -8,6 +8,7 @@ from utils import log_entry, get_next_id
 import pickle as pkl
 import json
 import fiftyone as fo
+import copy
 
 class ImageWithTransplantedObjects():
   def __init__(self, sample, save_location, dataset_name):
@@ -51,7 +52,8 @@ class ImageWithTransplantedObjects():
   
   def setup_modified_sample(self):
     self.modified_sample["new_id"] = self.transplanted_image_id
-    self.modified_sample["ground_truth"] = self.og_sample["ground_truth"]
+    # self.modified_sample["ground_truth"] = self.og_sample["ground_truth"]
+    self.modified_sample["ground_truth"] = copy.deepcopy(self.og_sample["ground_truth"])
     self.modified_sample.id = self.transplanted_image_id
     self.modified_sample.metadata = self.og_sample.metadata
 
@@ -100,9 +102,9 @@ class ImageWithTransplantedObjects():
           os.makedirs(transplanted_samples_folder, exist_ok=True)
 
           new_transplanted_image = ImageWithTransplantedObjects(
-            sample = self.og_sample,
-            save_location = unique_save_location,
-            dataset_name = self.dataset_name
+              sample=self.og_sample, #new_sample,
+              save_location=unique_save_location,
+              dataset_name=self.dataset_name
           )
 
           new_transplanted_image.add_transplanted_object(obj, (x,y))

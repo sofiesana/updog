@@ -111,63 +111,74 @@ class ExtractedObject():
 
     return obj_max_x, obj_min_x, obj_max_y, obj_min_y
   
+  def plot_masks(self, image_mask_obj, image_mask_other):
+    # plot the obj mask in red and the other mask in blue on the same plot
+
+    mask_plot = np.zeros((image_mask_obj.shape[0], image_mask_obj.shape[1], 3))
+    mask_plot[:, :, 0] = image_mask_obj
+    mask_plot[:, :, 2] = image_mask_other
+
+    plt.imshow(mask_plot)
+    plt.title("Red: Object mask, Blue: Other mask")
+    plt.show()
+  
 
   def check_for_overlap(self, image_width, image_height, other_mask, other_bbox, x, y, threshold=95):
-    # Convert bounding boxes from [0, 1] to pixel coordinates
-    obj_bbox = self.box
-    obj_y, obj_x = self.mask.nonzero()
+    """ Check if the object overlaps with another object in the image. 
+    Both masks and their corresponding bounding boxes are provided. These
+    are both from the same image so they are in different coordinates. """
 
-    # other_bbox: [xmin, ymin, xmax, ymax] in [0, 1] range
-    other_y, other_x = other_mask.nonzero()
+    # get bounding box of object and mask
+    obj_mask = self.mask
+    obj_bbox = self.box
 
     # Convert the bounding boxes from relative (0, 1) to absolute coordinates
     obj_bbox_pixels = [int(obj_bbox[0] * image_width), int(obj_bbox[1] * image_height),
                        int(obj_bbox[2] * image_width), int(obj_bbox[3] * image_height)]
     other_bbox_pixels = [int(other_bbox[0] * image_width), int(other_bbox[1] * image_height),
                          int(other_bbox[2] * image_width), int(other_bbox[3] * image_height)]
+    
+    # print("Obj pixels: ", obj_bbox_pixels, "Other pixels: ", other_bbox_pixels)
 
-    # Adjust the object mask position based on the x, y location provided
-    print("Coords: ", obj_bbox_pixels[0] + x, obj_bbox_pixels[1] + y, obj_bbox_pixels[2] + x, obj_bbox_pixels[3] + y)
-    obj_bbox_pixels = [obj_bbox_pixels[0] + x, obj_bbox_pixels[1] + y, obj_bbox_pixels[2] + x, obj_bbox_pixels[3] + y]
+    # create a blank image with the same size as the image
+    blank_image_obj = np.zeros((image_height, image_width))
+    blank_image_other = np.zeros((image_height, image_width))
 
-    # Create a mask of the object in the absolute image space
-    obj_mask_in_image = np.zeros((image_height, image_width), dtype=np.uint8)
+    # iterate through the obj mask and set the corresponding pixels in the blank image
+    for i in range(obj_mask.shape[0]):
+        for j in range(obj_mask.shape[1]):
+            if obj_mask[i, j] == 1:
+                image_x = obj_bbox_pixels[0] + j
+                image_y = obj_bbox_pixels[1] + i
+                image_x_plus_offset = x + j # x is the offset since we are sliding the object
+                image_y_plus_offset = y + i # y is the offset since we are sliding the object
+                blank_image_obj[image_y_plus_offset, image_x_plus_offset] = 1
 
-    # Adjust for the object's position and place the mask in the image
-    obj_y_adjusted = obj_y + obj_bbox_pixels[1] + y
-    obj_x_adjusted = obj_x + obj_bbox_pixels[0] + x
-    valid_obj_y = (obj_y_adjusted >= 0) & (obj_y_adjusted < image_height)
-    valid_obj_x = (obj_x_adjusted >= 0) & (obj_x_adjusted < image_width)
-    valid_obj_mask = valid_obj_y & valid_obj_x
-    obj_mask_in_image[obj_y_adjusted[valid_obj_mask], obj_x_adjusted[valid_obj_mask]] = 1
+    # iterate through the other mask and set the corresponding pixels in the blank image
+    for i in range(other_mask.shape[0]):
+        for j in range(other_mask.shape[1]):
+            if other_mask[i, j] == 1:
+                image_x = other_bbox_pixels[0] + j
+                image_y = other_bbox_pixels[1] + i
+                blank_image_other[image_y, image_x] = 1
 
-    # Check for overlap with the other mask, apply bounding box limits to the other mask
-    other_mask_in_image = np.zeros((image_height, image_width), dtype=np.uint8)
+    # calculate the overlap between the two masks
+    overlap = np.logical_and(blank_image_obj, blank_image_other)
 
-    # Adjust for the other mask's position and place the mask in the image
-    other_y_adjusted = other_y + other_bbox_pixels[1] + y
-    other_x_adjusted = other_x + other_bbox_pixels[0] + x
-    valid_other_y = (other_y_adjusted >= 0) & (other_y_adjusted < image_height)
-    valid_other_x = (other_x_adjusted >= 0) & (other_x_adjusted < image_width)
-    valid_other_mask = valid_other_y & valid_other_x
-    other_mask_in_image[other_y_adjusted[valid_other_mask], other_x_adjusted[valid_other_mask]] = 1
+    # calculate the percentage of overlap over the other object
+    overlap_percentage = np.sum(overlap) / np.sum(blank_image_other) * 100
 
-    # Crop both masks based on the bounding box of the other mask to ensure correct positioning
-    obj_mask_cropped = obj_mask_in_image[other_bbox_pixels[1]:other_bbox_pixels[3], other_bbox_pixels[0]:other_bbox_pixels[2]]
-    other_mask_cropped = other_mask_in_image[other_bbox_pixels[1]:other_bbox_pixels[3], other_bbox_pixels[0]:other_bbox_pixels[2]]
+    print(f"Overlap percentage: {overlap_percentage}")
 
-    # Calculate the intersection (only where both masks are 1)
-    intersection = np.logical_and(obj_mask_cropped, other_mask_cropped)
+    # self.plot_masks(blank_image_obj, blank_image_other) # uncomment to plot the masks for debugging
 
-    # Calculate percentage of the other mask overlapped by the object mask
-    overlap = np.sum(intersection) / np.sum(other_mask_cropped) * 100
 
-    # Check if the overlap is above the threshold
-    if overlap >= threshold:
-        print(f"Overlap detected: {overlap}%")
+    # if the overlap is greater than the threshold, return True
+    if overlap_percentage > threshold:
+        print(f"Overlapping")
+        return True
     else:
-        print(f"No significant overlap: {overlap}%")
-
-    return overlap
+        print(f"Not overlapping")
+        return False
 
 

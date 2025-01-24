@@ -2426,5 +2426,787 @@
                 }
             }
         }
+    },
+    {
+        "6793acde4a6e6ce8c83f72d1_200": {
+            "original_image_id": "6793acde4a6e6ce8c83f72d1",
+            "image_file_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_199_x0_y0/testing/transplanted_images/transplanted_image_6793acde4a6e6ce8c83f72d1_200.jpg",
+            "sample_save_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_199_x0_y0/testing/transplanted_samples/transplanted_6793acde4a6e6ce8c83f72d1_200.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793acde4a6e6ce8c83f72d1",
+                    "obj_file_location": "transplantation/outputs/extracted_objects/elephant_6793acde4a6e6ce8c83f72d1.pkl",
+                    "location": [
+                        0,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793acde4a6e6ce8c83f72d1_201": {
+            "original_image_id": "6793acde4a6e6ce8c83f72d1",
+            "image_file_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_199_x0_y10/testing/transplanted_images/transplanted_image_6793acde4a6e6ce8c83f72d1_201.jpg",
+            "sample_save_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_199_x0_y10/testing/transplanted_samples/transplanted_6793acde4a6e6ce8c83f72d1_201.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793acde4a6e6ce8c83f72d1",
+                    "obj_file_location": "transplantation/outputs/extracted_objects/elephant_6793acde4a6e6ce8c83f72d1.pkl",
+                    "location": [
+                        0,
+                        10
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793acde4a6e6ce8c83f72d1_202": {
+            "original_image_id": "6793acde4a6e6ce8c83f72d1",
+            "image_file_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_199_x0_y20/testing/transplanted_images/transplanted_image_6793acde4a6e6ce8c83f72d1_202.jpg",
+            "sample_save_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_199_x0_y20/testing/transplanted_samples/transplanted_6793acde4a6e6ce8c83f72d1_202.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793acde4a6e6ce8c83f72d1",
+                    "obj_file_location": "transplantation/outputs/extracted_objects/elephant_6793acde4a6e6ce8c83f72d1.pkl",
+                    "location": [
+                        0,
+                        20
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793acde4a6e6ce8c83f72d1_203": {
+            "original_image_id": "6793acde4a6e6ce8c83f72d1",
+            "image_file_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_199_x0_y30/testing/transplanted_images/transplanted_image_6793acde4a6e6ce8c83f72d1_203.jpg",
+            "sample_save_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_199_x0_y30/testing/transplanted_samples/transplanted_6793acde4a6e6ce8c83f72d1_203.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793acde4a6e6ce8c83f72d1",
+                    "obj_file_location": "transplantation/outputs/extracted_objects/elephant_6793acde4a6e6ce8c83f72d1.pkl",
+                    "location": [
+                        0,
+                        30
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793acde4a6e6ce8c83f72d1_204": {
+            "original_image_id": "6793acde4a6e6ce8c83f72d1",
+            "image_file_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_199_x0_y40/testing/transplanted_images/transplanted_image_6793acde4a6e6ce8c83f72d1_204.jpg",
+            "sample_save_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_199_x0_y40/testing/transplanted_samples/transplanted_6793acde4a6e6ce8c83f72d1_204.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793acde4a6e6ce8c83f72d1",
+                    "obj_file_location": "transplantation/outputs/extracted_objects/elephant_6793acde4a6e6ce8c83f72d1.pkl",
+                    "location": [
+                        0,
+                        40
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793acde4a6e6ce8c83f72d1_205": {
+            "original_image_id": "6793acde4a6e6ce8c83f72d1",
+            "image_file_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_199_x0_y50/testing/transplanted_images/transplanted_image_6793acde4a6e6ce8c83f72d1_205.jpg",
+            "sample_save_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_199_x0_y50/testing/transplanted_samples/transplanted_6793acde4a6e6ce8c83f72d1_205.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793acde4a6e6ce8c83f72d1",
+                    "obj_file_location": "transplantation/outputs/extracted_objects/elephant_6793acde4a6e6ce8c83f72d1.pkl",
+                    "location": [
+                        0,
+                        50
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793acde4a6e6ce8c83f72d1_206": {
+            "original_image_id": "6793acde4a6e6ce8c83f72d1",
+            "image_file_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_199_x0_y60/testing/transplanted_images/transplanted_image_6793acde4a6e6ce8c83f72d1_206.jpg",
+            "sample_save_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_199_x0_y60/testing/transplanted_samples/transplanted_6793acde4a6e6ce8c83f72d1_206.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793acde4a6e6ce8c83f72d1",
+                    "obj_file_location": "transplantation/outputs/extracted_objects/elephant_6793acde4a6e6ce8c83f72d1.pkl",
+                    "location": [
+                        0,
+                        60
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793acde4a6e6ce8c83f72d1_207": {
+            "original_image_id": "6793acde4a6e6ce8c83f72d1",
+            "image_file_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_199_x0_y70/testing/transplanted_images/transplanted_image_6793acde4a6e6ce8c83f72d1_207.jpg",
+            "sample_save_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_199_x0_y70/testing/transplanted_samples/transplanted_6793acde4a6e6ce8c83f72d1_207.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793acde4a6e6ce8c83f72d1",
+                    "obj_file_location": "transplantation/outputs/extracted_objects/elephant_6793acde4a6e6ce8c83f72d1.pkl",
+                    "location": [
+                        0,
+                        70
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793acde4a6e6ce8c83f72d1_208": {
+            "original_image_id": "6793acde4a6e6ce8c83f72d1",
+            "image_file_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_199_x0_y80/testing/transplanted_images/transplanted_image_6793acde4a6e6ce8c83f72d1_208.jpg",
+            "sample_save_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_199_x0_y80/testing/transplanted_samples/transplanted_6793acde4a6e6ce8c83f72d1_208.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793acde4a6e6ce8c83f72d1",
+                    "obj_file_location": "transplantation/outputs/extracted_objects/elephant_6793acde4a6e6ce8c83f72d1.pkl",
+                    "location": [
+                        0,
+                        80
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793acde4a6e6ce8c83f72d1_209": {
+            "original_image_id": "6793acde4a6e6ce8c83f72d1",
+            "image_file_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_199_x0_y90/testing/transplanted_images/transplanted_image_6793acde4a6e6ce8c83f72d1_209.jpg",
+            "sample_save_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_199_x0_y90/testing/transplanted_samples/transplanted_6793acde4a6e6ce8c83f72d1_209.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793acde4a6e6ce8c83f72d1",
+                    "obj_file_location": "transplantation/outputs/extracted_objects/elephant_6793acde4a6e6ce8c83f72d1.pkl",
+                    "location": [
+                        0,
+                        90
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793acde4a6e6ce8c83f72d1_211": {
+            "original_image_id": "6793acde4a6e6ce8c83f72d1",
+            "image_file_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_210_x0_y0/testing/transplanted_images/transplanted_image_6793acde4a6e6ce8c83f72d1_211.jpg",
+            "sample_save_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_210_x0_y0/testing/transplanted_samples/transplanted_6793acde4a6e6ce8c83f72d1_211.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793acde4a6e6ce8c83f72d1",
+                    "obj_file_location": "transplantation/outputs/extracted_objects/elephant_6793acde4a6e6ce8c83f72d1.pkl",
+                    "location": [
+                        0,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793acde4a6e6ce8c83f72d1_212": {
+            "original_image_id": "6793acde4a6e6ce8c83f72d1",
+            "image_file_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_210_x0_y20/testing/transplanted_images/transplanted_image_6793acde4a6e6ce8c83f72d1_212.jpg",
+            "sample_save_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_210_x0_y20/testing/transplanted_samples/transplanted_6793acde4a6e6ce8c83f72d1_212.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793acde4a6e6ce8c83f72d1",
+                    "obj_file_location": "transplantation/outputs/extracted_objects/elephant_6793acde4a6e6ce8c83f72d1.pkl",
+                    "location": [
+                        0,
+                        20
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793acde4a6e6ce8c83f72d1_215": {
+            "original_image_id": "6793acde4a6e6ce8c83f72d1",
+            "image_file_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_214_x0_y0/testing/transplanted_images/transplanted_image_6793acde4a6e6ce8c83f72d1_215.jpg",
+            "sample_save_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_214_x0_y0/testing/transplanted_samples/transplanted_6793acde4a6e6ce8c83f72d1_215.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793acde4a6e6ce8c83f72d1",
+                    "obj_file_location": "transplantation/outputs/extracted_objects/elephant_6793acde4a6e6ce8c83f72d1.pkl",
+                    "location": [
+                        0,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793acde4a6e6ce8c83f72d1_217": {
+            "original_image_id": "6793acde4a6e6ce8c83f72d1",
+            "image_file_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_216_x0_y0/testing/transplanted_images/transplanted_image_6793acde4a6e6ce8c83f72d1_217.jpg",
+            "sample_save_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_216_x0_y0/testing/transplanted_samples/transplanted_6793acde4a6e6ce8c83f72d1_217.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793acde4a6e6ce8c83f72d1",
+                    "obj_file_location": "transplantation/outputs/extracted_objects/elephant_6793acde4a6e6ce8c83f72d1.pkl",
+                    "location": [
+                        0,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793acde4a6e6ce8c83f72d1_218": {
+            "original_image_id": "6793acde4a6e6ce8c83f72d1",
+            "image_file_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_216_x0_y20/testing/transplanted_images/transplanted_image_6793acde4a6e6ce8c83f72d1_218.jpg",
+            "sample_save_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_216_x0_y20/testing/transplanted_samples/transplanted_6793acde4a6e6ce8c83f72d1_218.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793acde4a6e6ce8c83f72d1",
+                    "obj_file_location": "transplantation/outputs/extracted_objects/elephant_6793acde4a6e6ce8c83f72d1.pkl",
+                    "location": [
+                        0,
+                        20
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793acde4a6e6ce8c83f72d1_220": {
+            "original_image_id": "6793acde4a6e6ce8c83f72d1",
+            "image_file_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_219_x0_y0/testing/transplanted_images/transplanted_image_6793acde4a6e6ce8c83f72d1_220.jpg",
+            "sample_save_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_219_x0_y0/testing/transplanted_samples/transplanted_6793acde4a6e6ce8c83f72d1_220.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793acde4a6e6ce8c83f72d1",
+                    "obj_file_location": "transplantation/outputs/extracted_objects/elephant_6793acde4a6e6ce8c83f72d1.pkl",
+                    "location": [
+                        0,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793acde4a6e6ce8c83f72d1_221": {
+            "original_image_id": "6793acde4a6e6ce8c83f72d1",
+            "image_file_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_219_x0_y20/testing/transplanted_images/transplanted_image_6793acde4a6e6ce8c83f72d1_221.jpg",
+            "sample_save_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_219_x0_y20/testing/transplanted_samples/transplanted_6793acde4a6e6ce8c83f72d1_221.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793acde4a6e6ce8c83f72d1",
+                    "obj_file_location": "transplantation/outputs/extracted_objects/elephant_6793acde4a6e6ce8c83f72d1.pkl",
+                    "location": [
+                        0,
+                        20
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "None_224": {
+            "original_image_id": null,
+            "image_file_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_223_x0_y0/testing/transplanted_images/transplanted_image_None_224.jpg",
+            "sample_save_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_223_x0_y0/testing/transplanted_samples/transplanted_None_224.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793acde4a6e6ce8c83f72d1",
+                    "obj_file_location": "transplantation/outputs/extracted_objects/elephant_6793acde4a6e6ce8c83f72d1.pkl",
+                    "location": [
+                        0,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "None_227": {
+            "original_image_id": null,
+            "image_file_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_226_x0_y0/testing/transplanted_images/transplanted_image_None_227.jpg",
+            "sample_save_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_226_x0_y0/testing/transplanted_samples/transplanted_None_227.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793acde4a6e6ce8c83f72d1",
+                    "obj_file_location": "transplantation/outputs/extracted_objects/elephant_6793acde4a6e6ce8c83f72d1.pkl",
+                    "location": [
+                        0,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "None_229": {
+            "original_image_id": null,
+            "image_file_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_228_x0_y0/testing/transplanted_images/transplanted_image_None_229.jpg",
+            "sample_save_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_228_x0_y0/testing/transplanted_samples/transplanted_None_229.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793acde4a6e6ce8c83f72d1",
+                    "obj_file_location": "transplantation/outputs/extracted_objects/elephant_6793acde4a6e6ce8c83f72d1.pkl",
+                    "location": [
+                        0,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "None_231": {
+            "original_image_id": null,
+            "image_file_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_230_x0_y0/testing/transplanted_images/transplanted_image_None_231.jpg",
+            "sample_save_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_230_x0_y0/testing/transplanted_samples/transplanted_None_231.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793acde4a6e6ce8c83f72d1",
+                    "obj_file_location": "transplantation/outputs/extracted_objects/elephant_6793acde4a6e6ce8c83f72d1.pkl",
+                    "location": [
+                        0,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "None_233": {
+            "original_image_id": null,
+            "image_file_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_232_x0_y0/testing/transplanted_images/transplanted_image_None_233.jpg",
+            "sample_save_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_232_x0_y0/testing/transplanted_samples/transplanted_None_233.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793acde4a6e6ce8c83f72d1",
+                    "obj_file_location": "transplantation/outputs/extracted_objects/elephant_6793acde4a6e6ce8c83f72d1.pkl",
+                    "location": [
+                        0,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793acde4a6e6ce8c83f72d1_235": {
+            "original_image_id": "6793acde4a6e6ce8c83f72d1",
+            "image_file_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_234_x0_y0/testing/transplanted_images/transplanted_image_6793acde4a6e6ce8c83f72d1_235.jpg",
+            "sample_save_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_234_x0_y0/testing/transplanted_samples/transplanted_6793acde4a6e6ce8c83f72d1_235.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793acde4a6e6ce8c83f72d1",
+                    "obj_file_location": "transplantation/outputs/extracted_objects/elephant_6793acde4a6e6ce8c83f72d1.pkl",
+                    "location": [
+                        0,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793acde4a6e6ce8c83f72d1_236": {
+            "original_image_id": "6793acde4a6e6ce8c83f72d1",
+            "image_file_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_234_x0_y10/testing/transplanted_images/transplanted_image_6793acde4a6e6ce8c83f72d1_236.jpg",
+            "sample_save_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_234_x0_y10/testing/transplanted_samples/transplanted_6793acde4a6e6ce8c83f72d1_236.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793acde4a6e6ce8c83f72d1",
+                    "obj_file_location": "transplantation/outputs/extracted_objects/elephant_6793acde4a6e6ce8c83f72d1.pkl",
+                    "location": [
+                        0,
+                        10
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793acde4a6e6ce8c83f72d1_237": {
+            "original_image_id": "6793acde4a6e6ce8c83f72d1",
+            "image_file_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_234_x0_y20/testing/transplanted_images/transplanted_image_6793acde4a6e6ce8c83f72d1_237.jpg",
+            "sample_save_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_234_x0_y20/testing/transplanted_samples/transplanted_6793acde4a6e6ce8c83f72d1_237.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793acde4a6e6ce8c83f72d1",
+                    "obj_file_location": "transplantation/outputs/extracted_objects/elephant_6793acde4a6e6ce8c83f72d1.pkl",
+                    "location": [
+                        0,
+                        20
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793acde4a6e6ce8c83f72d1_238": {
+            "original_image_id": "6793acde4a6e6ce8c83f72d1",
+            "image_file_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_234_x0_y30/testing/transplanted_images/transplanted_image_6793acde4a6e6ce8c83f72d1_238.jpg",
+            "sample_save_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_234_x0_y30/testing/transplanted_samples/transplanted_6793acde4a6e6ce8c83f72d1_238.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793acde4a6e6ce8c83f72d1",
+                    "obj_file_location": "transplantation/outputs/extracted_objects/elephant_6793acde4a6e6ce8c83f72d1.pkl",
+                    "location": [
+                        0,
+                        30
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793acde4a6e6ce8c83f72d1_239": {
+            "original_image_id": "6793acde4a6e6ce8c83f72d1",
+            "image_file_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_234_x0_y40/testing/transplanted_images/transplanted_image_6793acde4a6e6ce8c83f72d1_239.jpg",
+            "sample_save_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_234_x0_y40/testing/transplanted_samples/transplanted_6793acde4a6e6ce8c83f72d1_239.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793acde4a6e6ce8c83f72d1",
+                    "obj_file_location": "transplantation/outputs/extracted_objects/elephant_6793acde4a6e6ce8c83f72d1.pkl",
+                    "location": [
+                        0,
+                        40
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793acde4a6e6ce8c83f72d1_240": {
+            "original_image_id": "6793acde4a6e6ce8c83f72d1",
+            "image_file_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_234_x0_y50/testing/transplanted_images/transplanted_image_6793acde4a6e6ce8c83f72d1_240.jpg",
+            "sample_save_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_234_x0_y50/testing/transplanted_samples/transplanted_6793acde4a6e6ce8c83f72d1_240.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793acde4a6e6ce8c83f72d1",
+                    "obj_file_location": "transplantation/outputs/extracted_objects/elephant_6793acde4a6e6ce8c83f72d1.pkl",
+                    "location": [
+                        0,
+                        50
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793acde4a6e6ce8c83f72d1_241": {
+            "original_image_id": "6793acde4a6e6ce8c83f72d1",
+            "image_file_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_234_x0_y60/testing/transplanted_images/transplanted_image_6793acde4a6e6ce8c83f72d1_241.jpg",
+            "sample_save_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_234_x0_y60/testing/transplanted_samples/transplanted_6793acde4a6e6ce8c83f72d1_241.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793acde4a6e6ce8c83f72d1",
+                    "obj_file_location": "transplantation/outputs/extracted_objects/elephant_6793acde4a6e6ce8c83f72d1.pkl",
+                    "location": [
+                        0,
+                        60
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793acde4a6e6ce8c83f72d1_242": {
+            "original_image_id": "6793acde4a6e6ce8c83f72d1",
+            "image_file_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_234_x0_y70/testing/transplanted_images/transplanted_image_6793acde4a6e6ce8c83f72d1_242.jpg",
+            "sample_save_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_234_x0_y70/testing/transplanted_samples/transplanted_6793acde4a6e6ce8c83f72d1_242.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793acde4a6e6ce8c83f72d1",
+                    "obj_file_location": "transplantation/outputs/extracted_objects/elephant_6793acde4a6e6ce8c83f72d1.pkl",
+                    "location": [
+                        0,
+                        70
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793acde4a6e6ce8c83f72d1_244": {
+            "original_image_id": "6793acde4a6e6ce8c83f72d1",
+            "image_file_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_243_x0_y0/testing/transplanted_images/transplanted_image_6793acde4a6e6ce8c83f72d1_244.jpg",
+            "sample_save_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_243_x0_y0/testing/transplanted_samples/transplanted_6793acde4a6e6ce8c83f72d1_244.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793acde4a6e6ce8c83f72d1",
+                    "obj_file_location": "transplantation/outputs/extracted_objects/elephant_6793acde4a6e6ce8c83f72d1.pkl",
+                    "location": [
+                        0,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793acde4a6e6ce8c83f72d1_245": {
+            "original_image_id": "6793acde4a6e6ce8c83f72d1",
+            "image_file_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_243_x0_y10/testing/transplanted_images/transplanted_image_6793acde4a6e6ce8c83f72d1_245.jpg",
+            "sample_save_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_243_x0_y10/testing/transplanted_samples/transplanted_6793acde4a6e6ce8c83f72d1_245.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793acde4a6e6ce8c83f72d1",
+                    "obj_file_location": "transplantation/outputs/extracted_objects/elephant_6793acde4a6e6ce8c83f72d1.pkl",
+                    "location": [
+                        0,
+                        10
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793acde4a6e6ce8c83f72d1_246": {
+            "original_image_id": "6793acde4a6e6ce8c83f72d1",
+            "image_file_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_243_x0_y20/testing/transplanted_images/transplanted_image_6793acde4a6e6ce8c83f72d1_246.jpg",
+            "sample_save_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_243_x0_y20/testing/transplanted_samples/transplanted_6793acde4a6e6ce8c83f72d1_246.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793acde4a6e6ce8c83f72d1",
+                    "obj_file_location": "transplantation/outputs/extracted_objects/elephant_6793acde4a6e6ce8c83f72d1.pkl",
+                    "location": [
+                        0,
+                        20
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793acde4a6e6ce8c83f72d1_247": {
+            "original_image_id": "6793acde4a6e6ce8c83f72d1",
+            "image_file_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_243_x0_y30/testing/transplanted_images/transplanted_image_6793acde4a6e6ce8c83f72d1_247.jpg",
+            "sample_save_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_243_x0_y30/testing/transplanted_samples/transplanted_6793acde4a6e6ce8c83f72d1_247.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793acde4a6e6ce8c83f72d1",
+                    "obj_file_location": "transplantation/outputs/extracted_objects/elephant_6793acde4a6e6ce8c83f72d1.pkl",
+                    "location": [
+                        0,
+                        30
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793acde4a6e6ce8c83f72d1_248": {
+            "original_image_id": "6793acde4a6e6ce8c83f72d1",
+            "image_file_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_243_x0_y40/testing/transplanted_images/transplanted_image_6793acde4a6e6ce8c83f72d1_248.jpg",
+            "sample_save_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_243_x0_y40/testing/transplanted_samples/transplanted_6793acde4a6e6ce8c83f72d1_248.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793acde4a6e6ce8c83f72d1",
+                    "obj_file_location": "transplantation/outputs/extracted_objects/elephant_6793acde4a6e6ce8c83f72d1.pkl",
+                    "location": [
+                        0,
+                        40
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793acde4a6e6ce8c83f72d1_249": {
+            "original_image_id": "6793acde4a6e6ce8c83f72d1",
+            "image_file_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_243_x0_y50/testing/transplanted_images/transplanted_image_6793acde4a6e6ce8c83f72d1_249.jpg",
+            "sample_save_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_243_x0_y50/testing/transplanted_samples/transplanted_6793acde4a6e6ce8c83f72d1_249.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793acde4a6e6ce8c83f72d1",
+                    "obj_file_location": "transplantation/outputs/extracted_objects/elephant_6793acde4a6e6ce8c83f72d1.pkl",
+                    "location": [
+                        0,
+                        50
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793acde4a6e6ce8c83f72d1_250": {
+            "original_image_id": "6793acde4a6e6ce8c83f72d1",
+            "image_file_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_243_x0_y60/testing/transplanted_images/transplanted_image_6793acde4a6e6ce8c83f72d1_250.jpg",
+            "sample_save_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_243_x0_y60/testing/transplanted_samples/transplanted_6793acde4a6e6ce8c83f72d1_250.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793acde4a6e6ce8c83f72d1",
+                    "obj_file_location": "transplantation/outputs/extracted_objects/elephant_6793acde4a6e6ce8c83f72d1.pkl",
+                    "location": [
+                        0,
+                        60
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793acde4a6e6ce8c83f72d1_251": {
+            "original_image_id": "6793acde4a6e6ce8c83f72d1",
+            "image_file_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_243_x0_y70/testing/transplanted_images/transplanted_image_6793acde4a6e6ce8c83f72d1_251.jpg",
+            "sample_save_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_243_x0_y70/testing/transplanted_samples/transplanted_6793acde4a6e6ce8c83f72d1_251.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793acde4a6e6ce8c83f72d1",
+                    "obj_file_location": "transplantation/outputs/extracted_objects/elephant_6793acde4a6e6ce8c83f72d1.pkl",
+                    "location": [
+                        0,
+                        70
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793acde4a6e6ce8c83f72d1_253": {
+            "original_image_id": "6793acde4a6e6ce8c83f72d1",
+            "image_file_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_252_x0_y0/testing/transplanted_images/transplanted_image_6793acde4a6e6ce8c83f72d1_253.jpg",
+            "sample_save_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_252_x0_y0/testing/transplanted_samples/transplanted_6793acde4a6e6ce8c83f72d1_253.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793acde4a6e6ce8c83f72d1",
+                    "obj_file_location": "transplantation/outputs/extracted_objects/elephant_6793acde4a6e6ce8c83f72d1.pkl",
+                    "location": [
+                        0,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793acde4a6e6ce8c83f72d1_254": {
+            "original_image_id": "6793acde4a6e6ce8c83f72d1",
+            "image_file_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_252_x0_y10/testing/transplanted_images/transplanted_image_6793acde4a6e6ce8c83f72d1_254.jpg",
+            "sample_save_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_252_x0_y10/testing/transplanted_samples/transplanted_6793acde4a6e6ce8c83f72d1_254.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793acde4a6e6ce8c83f72d1",
+                    "obj_file_location": "transplantation/outputs/extracted_objects/elephant_6793acde4a6e6ce8c83f72d1.pkl",
+                    "location": [
+                        0,
+                        10
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793acde4a6e6ce8c83f72d1_255": {
+            "original_image_id": "6793acde4a6e6ce8c83f72d1",
+            "image_file_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_252_x0_y20/testing/transplanted_images/transplanted_image_6793acde4a6e6ce8c83f72d1_255.jpg",
+            "sample_save_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_252_x0_y20/testing/transplanted_samples/transplanted_6793acde4a6e6ce8c83f72d1_255.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793acde4a6e6ce8c83f72d1",
+                    "obj_file_location": "transplantation/outputs/extracted_objects/elephant_6793acde4a6e6ce8c83f72d1.pkl",
+                    "location": [
+                        0,
+                        20
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793acde4a6e6ce8c83f72d1_256": {
+            "original_image_id": "6793acde4a6e6ce8c83f72d1",
+            "image_file_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_252_x0_y30/testing/transplanted_images/transplanted_image_6793acde4a6e6ce8c83f72d1_256.jpg",
+            "sample_save_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_252_x0_y30/testing/transplanted_samples/transplanted_6793acde4a6e6ce8c83f72d1_256.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793acde4a6e6ce8c83f72d1",
+                    "obj_file_location": "transplantation/outputs/extracted_objects/elephant_6793acde4a6e6ce8c83f72d1.pkl",
+                    "location": [
+                        0,
+                        30
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793acde4a6e6ce8c83f72d1_257": {
+            "original_image_id": "6793acde4a6e6ce8c83f72d1",
+            "image_file_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_252_x0_y40/testing/transplanted_images/transplanted_image_6793acde4a6e6ce8c83f72d1_257.jpg",
+            "sample_save_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_252_x0_y40/testing/transplanted_samples/transplanted_6793acde4a6e6ce8c83f72d1_257.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793acde4a6e6ce8c83f72d1",
+                    "obj_file_location": "transplantation/outputs/extracted_objects/elephant_6793acde4a6e6ce8c83f72d1.pkl",
+                    "location": [
+                        0,
+                        40
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793acde4a6e6ce8c83f72d1_258": {
+            "original_image_id": "6793acde4a6e6ce8c83f72d1",
+            "image_file_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_252_x0_y50/testing/transplanted_images/transplanted_image_6793acde4a6e6ce8c83f72d1_258.jpg",
+            "sample_save_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_252_x0_y50/testing/transplanted_samples/transplanted_6793acde4a6e6ce8c83f72d1_258.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793acde4a6e6ce8c83f72d1",
+                    "obj_file_location": "transplantation/outputs/extracted_objects/elephant_6793acde4a6e6ce8c83f72d1.pkl",
+                    "location": [
+                        0,
+                        50
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793acde4a6e6ce8c83f72d1_259": {
+            "original_image_id": "6793acde4a6e6ce8c83f72d1",
+            "image_file_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_252_x0_y60/testing/transplanted_images/transplanted_image_6793acde4a6e6ce8c83f72d1_259.jpg",
+            "sample_save_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_252_x0_y60/testing/transplanted_samples/transplanted_6793acde4a6e6ce8c83f72d1_259.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793acde4a6e6ce8c83f72d1",
+                    "obj_file_location": "transplantation/outputs/extracted_objects/elephant_6793acde4a6e6ce8c83f72d1.pkl",
+                    "location": [
+                        0,
+                        60
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793acde4a6e6ce8c83f72d1_260": {
+            "original_image_id": "6793acde4a6e6ce8c83f72d1",
+            "image_file_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_252_x0_y70/testing/transplanted_images/transplanted_image_6793acde4a6e6ce8c83f72d1_260.jpg",
+            "sample_save_location": "transplantation/outputs/transplants_with_stride/6793acde4a6e6ce8c83f72d1_252_x0_y70/testing/transplanted_samples/transplanted_6793acde4a6e6ce8c83f72d1_260.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793acde4a6e6ce8c83f72d1",
+                    "obj_file_location": "transplantation/outputs/extracted_objects/elephant_6793acde4a6e6ce8c83f72d1.pkl",
+                    "location": [
+                        0,
+                        70
+                    ]
+                }
+            }
+        }
     }
 ]
