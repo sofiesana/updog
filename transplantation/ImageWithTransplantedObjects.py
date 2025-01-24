@@ -66,11 +66,27 @@ class ImageWithTransplantedObjects():
   def transplant_with_sliding_window(self, obj, stride):
     generated_images = []
     image_width, image_height = self.modified_image.size
+    print("Image size: ", image_height, image_width)
     obj_width, obj_height = obj.mask.shape[1], obj.mask.shape[0]
 
     for y in range(0, image_height - obj_height + 1, stride):
       for x in range (0, image_width - obj_width + 1, stride):
           print(f"Placing object at ({x}, {y})")
+
+          overlap_exceeded = False
+          for detection in self.og_sample["ground_truth"].detections:
+            other_mask = detection.mask
+            other_bbox = detection.bounding_box
+
+            if obj.check_for_overlap(image_width, image_height, other_mask, other_bbox, x, y):
+              overlap_exceeded = True
+              print("Skipping transplant due to overlap")
+              break
+
+          print()
+          
+          if overlap_exceeded == True:
+            continue
 
           # for saving the images, both as a png and as a pkl in unique folders
           unique_save_location = os.path.join(
