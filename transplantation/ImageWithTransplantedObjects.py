@@ -119,6 +119,8 @@ class ImageWithTransplantedObjects():
     self.modified_sample["original_image_id"] = self.og_id
     self.modified_sample["origina_image_path"] = self.og_sample.filepath
     self.modified_sample.save()
+    # print len of dataset
+    print(len(self.dataset))
 
     json_sample = self.modified_sample.to_dict(include_private=True)
     with open(self.modified_sample_path, 'w') as f:
