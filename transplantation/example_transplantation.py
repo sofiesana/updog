@@ -28,35 +28,35 @@ def main():
 
     sample = dataset.first()
 
-    # obj_extract = ImageObjectExtractor(sample, save_location=save_location, object_log_file='transplantation/outputs/extracted_objects_log.json')
-    # print("extracting objects")
-    # obj_extract.extract_objects()
+    obj_extract = ImageObjectExtractor(sample, save_location=save_location, object_log_file='transplantation/outputs/extracted_objects_log.json')
+    print("extracting objects")
+    obj_extract.extract_objects()
 
     new_image = ImageWithTransplantedObjects(sample=sample, save_location=save_location, dataset_name="testing")
     obj = ExtractedObject(log_file_path='transplantation/outputs/extracted_objects_log.json')
     obj.load_object(os.path.join(save_location, f'extracted_objects/elephant_{sample.id}.pkl'))
+    new_image.add_transplanted_object(obj, (0,0))
+    new_image.display_transplanted_image()
+    new_image.save_transplanted_image()
 
-    # Scale down the object before transplantation
-    new_width = 300
-    new_height = 300
-    obj.scale_object(new_width, new_height)  
+    # # Scale down the object before transplantation
+    # new_width = 300
+    # new_height = 300
+    # obj.scale_object(new_width, new_height)  
 
-    # obj.display_extracted_object()
-    # new_image.add_transplanted_object(obj, (0,0))
-    # new_image.add_transplanted_object(obj, (200, 200))
+    # # obj.display_extracted_object()
+    # # new_image.add_transplanted_object(obj, (0,0))
+    # # new_image.add_transplanted_object(obj, (200, 200))
 
-    # new_image.display_transplanted_image()
-    # new_image.save_transplanted_image()
-
-
-    all_transplanted_images = new_image.transplant_with_sliding_window(obj, 50)
-
-    for i, transplanted_image in enumerate(all_transplanted_images):
-        print(f"Saving transplanted image {i+1}...")
-        transplanted_image.display_transplanted_image()
+    # # new_image.display_transplanted_image()
+    # # new_image.save_transplanted_image()
 
 
+    # all_transplanted_images = new_image.transplant_with_sliding_window(obj, 50)
 
+    # for i, transplanted_image in enumerate(all_transplanted_images):
+    #     print(f"Saving transplanted image {i+1}...")
+    #     transplanted_image.display_transplanted_image()
 
     new_image = ImageWithTransplantedObjects(sample=sample, save_location=save_location, dataset_name="testing")
     obj = ExtractedObject(log_file_path='transplantation/outputs/extracted_objects_log.json')
