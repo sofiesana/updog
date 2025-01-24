@@ -19,9 +19,12 @@ class ExtractedObject():
     self.is_setup = False
     self.file_location = None
     self.obj_id = None
+    self.og_img_dimensions = None
 
-  def setup(self, mask, mask_with_pixels, id, class_label, box, box_in_pixels, save_location):
+  def setup(self, image, mask, mask_with_pixels, id, class_label, box, box_in_pixels, save_location):
     if not self.is_setup:
+      self.og_img_dimensions = image.shape
+      # print(image.shape)
       self.mask = mask
       self.mask_with_pixels = mask_with_pixels
       self.id = id

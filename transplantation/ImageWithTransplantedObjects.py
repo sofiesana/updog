@@ -40,6 +40,7 @@ class ImageWithTransplantedObjects():
     self.setup_modified_sample()
 
     self.dataset = self.setup_dataset()
+    self.dataset.add_sample(self.modified_sample)
 
   def setup_dataset(self):
     if self.dataset_name not in fo.list_datasets():
@@ -115,7 +116,6 @@ class ImageWithTransplantedObjects():
     image = Image.fromarray(self.modified_image)
     image.save(self.image_save_location)
     
-    self.dataset.add_sample(self.modified_sample)
     self.modified_sample["original_image_id"] = self.og_id
     self.modified_sample["origina_image_path"] = self.og_sample.filepath
     self.modified_sample.save()
@@ -131,9 +131,14 @@ class ImageWithTransplantedObjects():
     display(image)
   
   def update_modified_sample_with_transplant(self, obj, location):
-        print("updating modified sample")
-        new_bbox = [location[0], location[1], obj.box[2], obj.box[3]]
+        # print("updating modified sample")
+        # print(self.og_image.size)
+        # print(obj.og_img_dimensions)
+        new_width = (obj.box[2]*obj.og_img_dimensions[0]) /self.og_image.size[1]
+        new_height = (obj.box[3]*obj.og_img_dimensions[1]) /self.og_image.size[0]
+        new_bbox = [location[0]/self.og_image.size[0], location[1]/self.og_image.size[1], new_width, new_height]
         new_segmentation = obj.mask
+        # print(new_bbox, new_segmentation)
         new_detection = {
             "label": obj.class_label,
             "bounding_box": new_bbox,
@@ -145,4 +150,6 @@ class ImageWithTransplantedObjects():
                     mask=new_segmentation
                 )
         self.modified_sample["ground_truth"].detections.append(new_detection)
+        # print(self.modified_sample["ground_truth"].detections)
+        # self.modified_sample.save()
         

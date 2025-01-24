@@ -89,7 +89,7 @@ class MaskExtractor():
 
   def save_extracted_object(self):
     obj = ExtractedObject(log_file_path=self.object_log_file)
-    obj.setup(self.mask, self.mask_with_pixels, self.id, self.class_label, self.box, self.box_in_pixels, self.save_location)
+    obj.setup(self.pixels, self.mask, self.mask_with_pixels, self.id, self.class_label, self.box, self.box_in_pixels, self.save_location)
     obj.save_object()
     obj.save_mask_with_pixels_as_jpg()
     obj.save_mask()
