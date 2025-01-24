@@ -21,11 +21,15 @@ class ExtractedObject():
     self.file_location = None
     self.obj_id = None
     self.og_img_dimensions = None
+    self.mask_to_og_ratio = None
 
   def setup(self, image, mask, mask_with_pixels, id, obj_id, class_label, box, box_in_pixels, save_location):
     if not self.is_setup:
+      # print(f"Setting up object with ID: {obj_id}")
       self.og_img_dimensions = image.shape
-      # print(image.shape)
+      obj_area = mask.shape[0] * mask.shape[1]
+      img_area = np.prod(image.shape)
+      self.mask_to_og_ratio = obj_area / img_area
       self.mask = mask
       self.mask_with_pixels = mask_with_pixels
       self.id = id
@@ -42,11 +46,13 @@ class ExtractedObject():
       
       #check if file_location already exists
       if os.path.exists(self.file_location):
-        print("Setup failed: Object already exists, already extracted")
-      
-      self.is_setup = True
+        print(f"Setup failed: Object with ID {obj_id} already exists at {self.file_location}")
+        self.is_setup = False
+      else:
+        # print(f"Object setup successful for ID: {obj_id}")
+        self.is_setup = True
     else:
-      print("Setup failed: Object already setup")
+      print(f"Setup failed: Object with ID {obj_id} already setup")
   
   def log_object(self):
     entry = {
@@ -90,7 +96,6 @@ class ExtractedObject():
     location = os.path.join(location_folder, f'mask_{self.class_label}_{self.id}.jpg')
     image = Image.fromarray(self.mask)
     image.save(location)
-
 
   def scale_object(self, new_width, new_height):
     self.mask = Image.fromarray(self.mask)

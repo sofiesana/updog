@@ -6,7 +6,7 @@ from MaskExtractor import MaskExtractor
 
 
 class ImageObjectExtractor():
-  def __init__(self, sample, save_location, object_log_file):
+  def __init__(self, sample, save_location, object_log_file, filter_ratio=0.05, filter=False):
     self.sample = sample
     self.object_log_file = object_log_file
     self.id = sample.id
@@ -19,6 +19,8 @@ class ImageObjectExtractor():
     self.mask = None
     self.box = None
     self.mask_extractor = None
+    self.filter_ratio = filter_ratio
+    self.filter = filter
 
   def get_image(self, sample):
     original_image_path = self.sample.filepath
@@ -42,7 +44,7 @@ class ImageObjectExtractor():
         label_found = True
         self.get_mask_and_box(segmentation)
 
-        self.mask_extractor = MaskExtractor(self.box, self.mask, np.array(self.img), self.id, segmentation.id, label, self.save_location, self.object_log_file)
+        self.mask_extractor = MaskExtractor(self.box, self.mask, np.array(self.img), self.id, segmentation.id, label, self.save_location, self.object_log_file, filter_ratio=self.filter_ratio, filter=self.filter)
         self.mask_extractor.run_extractor()
 
         self.reset_variables()
