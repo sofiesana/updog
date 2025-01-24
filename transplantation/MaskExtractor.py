@@ -5,13 +5,14 @@ from utils import display
 from ExtractedObject import ExtractedObject
 
 class MaskExtractor():
-  def __init__(self, box, mask, pixels, id, class_label, save_location, object_log_file):
+  def __init__(self, box, mask, pixels, id, obj_id, class_label, save_location, object_log_file):
     self.object_log_file = object_log_file
     self.box = box
     self.mask = mask
     self.pixels = pixels
     self.masked_pixels = np.copy(pixels)
     self.id = id
+    self.obj_id = obj_id
     self.class_label = class_label
     self.save_location = save_location
 
@@ -89,7 +90,8 @@ class MaskExtractor():
 
   def save_extracted_object(self):
     obj = ExtractedObject(log_file_path=self.object_log_file)
-    obj.setup(self.pixels, self.mask, self.mask_with_pixels, self.id, self.class_label, self.box, self.box_in_pixels, self.save_location)
-    obj.save_object()
-    obj.save_mask_with_pixels_as_jpg()
-    obj.save_mask()
+    obj.setup(self.pixels, self.mask, self.mask_with_pixels, self.id, self.obj_id, self.class_label, self.box, self.box_in_pixels, self.save_location)
+    if obj.is_setup:
+      obj.save_object()
+      obj.save_mask_with_pixels_as_jpg()
+      obj.save_mask()

@@ -42,7 +42,7 @@ class ImageObjectExtractor():
         label_found = True
         self.get_mask_and_box(segmentation)
 
-        self.mask_extractor = MaskExtractor(self.box, self.mask, np.array(self.img), self.id, label, self.save_location, self.object_log_file)
+        self.mask_extractor = MaskExtractor(self.box, self.mask, np.array(self.img), self.id, segmentation.id, label, self.save_location, self.object_log_file)
         self.mask_extractor.run_extractor()
 
         self.reset_variables()

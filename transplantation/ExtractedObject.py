@@ -21,7 +21,7 @@ class ExtractedObject():
     self.obj_id = None
     self.og_img_dimensions = None
 
-  def setup(self, image, mask, mask_with_pixels, id, class_label, box, box_in_pixels, save_location):
+  def setup(self, image, mask, mask_with_pixels, id, obj_id, class_label, box, box_in_pixels, save_location):
     if not self.is_setup:
       self.og_img_dimensions = image.shape
       # print(image.shape)
@@ -36,13 +36,12 @@ class ExtractedObject():
       if not os.path.exists(location_folder):
         os.makedirs(location_folder)
       
-      self.obj_id = f'{self.class_label}_{self.id}'
+      self.obj_id = obj_id
       self.file_location = os.path.join(location_folder, f'{self.obj_id}.pkl')
       
       #check if file_location already exists
       if os.path.exists(self.file_location):
-        self.obj_id = f'{self.obj_id}_{get_next_id("extracted_objects_ids.json")}'
-        self.file_location = os.path.join(location_folder, f'{self.obj_id}.pkl')
+        print("Setup failed: Object already exists, already extracted")
       
       self.is_setup = True
     else:
@@ -58,7 +57,6 @@ class ExtractedObject():
     }
 
     log_entry(self.log_file_path, entry, id=self.obj_id)
-    
 
   def save_object(self):
     with open(self.file_location, 'wb') as f:

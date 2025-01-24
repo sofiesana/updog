@@ -38,6 +38,7 @@ def display(image):
     plt.show(block=True)  # This will block execution until the window is closed
 
 def log_entry(log_file, log_entry, id):
+    print(log_file)
     if os.path.exists(log_file):
       with open(log_file, 'r') as f:
         log_data = json.load(f)
