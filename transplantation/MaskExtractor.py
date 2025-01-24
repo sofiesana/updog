@@ -5,7 +5,7 @@ from utils import display
 from ExtractedObject import ExtractedObject
 
 class MaskExtractor():
-  def __init__(self, box, mask, pixels, id, obj_id, class_label, save_location, object_log_file, filter=False, min_filter_ratio=0.05, max_filter_ratio=0.8, filter_type="both"):
+  def __init__(self, box, mask, pixels, id, obj_id, class_label, save_location, object_log_file, og_dataset_name, filter=False, min_filter_ratio=0.05, max_filter_ratio=0.8, filter_type="both"):
     self.object_log_file = object_log_file
     self.box = box
     self.mask = mask
@@ -19,6 +19,7 @@ class MaskExtractor():
     self.min_filter_ratio = min_filter_ratio
     self.max_filter_ratio = max_filter_ratio
     self.filter_type = filter_type
+    self.og_dataset_name = og_dataset_name
 
     # Getting all the dimensions
     self.top_left_x, self.top_left_y, self.width, self.height = box

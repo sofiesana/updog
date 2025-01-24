@@ -8,7 +8,7 @@ from utils import get_next_id
 import matplotlib.pyplot as plt
 
 class ExtractedObject():
-  def __init__(self, log_file_path):
+  def __init__(self, log_file_path=None):
     self.log_file_path = log_file_path
     self.mask = None
     self.mask_with_pixels = None
@@ -55,6 +55,9 @@ class ExtractedObject():
       print(f"Setup failed: Object with ID {obj_id} already setup")
   
   def log_object(self):
+    if self.log_file_path is None:
+      print("No log file path provided")
+      return
     entry = {
       f"{self.obj_id}": {
         "class_label": self.class_label,
