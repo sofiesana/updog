@@ -21,7 +21,7 @@ class ImageWithTransplantedObjects():
     self.modified_image = self.og_image
     self.og_id = sample.id
     self.og_sample = sample
-    self.transplanted_image_id = f"{self.og_id}_{get_next_id("transplantation_ids.json")}"
+    self.transplanted_image_id = f"{self.og_id}_{get_next_id('transplantation_ids.json')}"
     self.dataset_name = dataset_name
     self.transplantations = {}
     self.transplantation_counter = 0

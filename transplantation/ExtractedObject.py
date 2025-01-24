@@ -19,6 +19,7 @@ class ExtractedObject():
 
   def setup(self, mask, mask_with_pixels, id, class_label, box, box_in_pixels, save_location):
     if not self.is_setup:
+      print("Setting up object...")
       self.mask = mask
       self.mask_with_pixels = mask_with_pixels
       self.id = id
