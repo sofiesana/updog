@@ -3,6 +3,7 @@ import pickle as pkl
 from PIL import Image
 from utils import display, log_entry
 import json
+import numpy as np
 
 class ExtractedObject():
   def __init__(self, log_file_path):
@@ -78,3 +79,15 @@ class ExtractedObject():
     location = os.path.join(location_folder, f'mask_{self.class_label}_{self.id}.jpg')
     image = Image.fromarray(self.mask)
     image.save(location)
+
+
+  def scale_object(self, new_width, new_height):
+    self.mask = Image.fromarray(self.mask)
+    self.mask = self.mask.resize((new_width, new_height), Image.Resampling.LANCZOS)
+    self.mask = np.array(self.mask)
+
+    self.mask_with_pixels = Image.fromarray(self.mask_with_pixels)
+    self.mask_with_pixels = self.mask_with_pixels.resize((new_width, new_height), Image.Resampling.LANCZOS)
+    self.mask_with_pixels = np.array(self.mask_with_pixels)
+
+    print(f"Object scaled to: {new_width}x{new_height}")

@@ -21,7 +21,7 @@ class ImageWithTransplantedObjects():
     self.modified_image = self.og_image
     self.og_id = sample.id
     self.og_sample = sample
-    self.transplanted_image_id = f"{self.og_id}_{get_next_id("transplantation_ids.json")}"
+    self.transplanted_image_id = f"{self.og_id}_{get_next_id('transplantation_ids.json')}"
     self.dataset_name = dataset_name
     self.transplantations = {}
     self.transplantation_counter = 0
@@ -62,6 +62,39 @@ class ImageWithTransplantedObjects():
     transplanter.transplant_object(self.modified_image, obj, location)
     self.modified_image = transplanter.get_transplanted_image()
     self.update_modified_sample_with_transplant(obj, location)
+
+  def transplant_with_sliding_window(self, obj, stride):
+    generated_images = []
+    image_width, image_height = self.modified_image.size
+    obj_width, obj_height = obj.mask.shape[1], obj.mask.shape[0]
+
+    for y in range(0, image_height - obj_height + 1, stride):
+      for x in range (0, image_width - obj_width + 1, stride):
+          print(f"Placing object at ({x}, {y})")
+
+          # for saving the images, both as a png and as a pkl in unique folders
+          unique_save_location = os.path.join(
+              'transplantation/outputs/transplants_with_stride',
+              f'{self.transplanted_image_id}_x{x}_y{y}'
+          )
+
+          transplanted_images_folder = os.path.join(unique_save_location, 'transplanted_images')
+          transplanted_samples_folder = os.path.join(unique_save_location, 'transplanted_samples')
+          os.makedirs(transplanted_images_folder, exist_ok=True)
+          os.makedirs(transplanted_samples_folder, exist_ok=True)
+
+          new_transplanted_image = ImageWithTransplantedObjects(
+            sample = self.og_sample,
+            save_location = unique_save_location,
+            dataset_name = self.dataset_name
+          )
+
+          new_transplanted_image.add_transplanted_object(obj, (x,y))
+          new_transplanted_image.save_transplanted_image()
+          generated_images.append(new_transplanted_image)
+
+    return generated_images
+  
 
   def save_transplanted_image(self):
     self.log_modified_image()
