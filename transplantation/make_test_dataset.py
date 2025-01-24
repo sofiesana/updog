@@ -57,6 +57,7 @@ def view_dataset(dataset_name):
     session.wait()
 
 if __name__ == "__main__":
+    # First make sure the outputs folder is empty
     # run main() only once. If you want to run it again, you have to delete the folder:
     # transplantations/outputs
     # otherwise it becomes a mess.
