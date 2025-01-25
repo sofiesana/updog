@@ -50,15 +50,15 @@ class DatasetMaker():
             print(f"Dataset {self.new_dataset_name} does not exist. Creating a new dataset")
             self.dataset = fo.Dataset(name=self.new_dataset_name)
 
-    def extract_dataset(self):
+    def extract_dataset(self, extract_path):
         # Load your dataset
         dataset = fo.load_dataset(self.new_dataset_name)
-        extract_dir = os.path.join(self.dataset_save_location, "extracted_dataset")
+        extract_dir = extract_path
         # Export the dataset to a directory in COCO format
+        dataset_type = COCODetectionDataset
         dataset.export(
             export_dir=extract_dir,
-            dataset_type=fo.types.COCODetectionDataset,
-            label_field="ground_truth"
+            dataset_type=dataset_type
         )
 
         print(f"Dataset exported to: {self.dataset_save_location}")
@@ -67,6 +67,15 @@ class DatasetMaker():
         with open(os.path.join(self.save_folder, f'{self.og_dataset_name}_extracted_objects_log.json')) as f:
             objects_log = json.load(f)
         print(f'{len(objects_log)} objects are extracted and ready to transplant')
+    
+    def print_no_of_images_created(self):
+        path = os.path.join(self.dataset_save_location, f'{self.new_dataset_name}_transplantation_log.json')
+        if os.path.exists(path):
+            with open(os.path.join(self.dataset_save_location, f'{self.new_dataset_name}_transplantation_log.json')) as f:
+                img_log = json.load(f)
+            print(f'{len(img_log)} images have been created through transplantation')
+        else:
+            print('0 images have been created through transplantation')
 
     def run_dataset_maker(self):
         path_to_objects = os.path.join(self.save_folder, f'{self.og_dataset_name}_extracted_objects_log.json')
@@ -81,7 +90,7 @@ class DatasetMaker():
 
         for sample in tqdm(self.og_dataset, desc="Processing samples"):
             self.current_og_sample = sample
-            print(f"TRANSPLANTING INTO IMAGE {sample.id}")
+            # print(f"TRANSPLANTING INTO IMAGE {sample.id}")
             for i in tqdm(range(len(objects_log)), desc="Transplanting objects"):
                 id = get_id_at_index(objects_log, i)
                 og_image_id = objects_log[i][id]['og_image_id']

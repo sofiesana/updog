@@ -4,6 +4,16 @@ import matplotlib.pyplot as plt
 import json
 import os
 import fiftyone as fo
+from fiftyone.types.dataset_types import COCODetectionDataset
+
+def import_dataset(import_dir):
+  # Import the dataset from the directory
+  imported_dataset = fo.Dataset.from_dir(
+      dataset_dir=import_dir,
+      dataset_type = COCODetectionDataset
+  )
+
+  print(f"Dataset imported with name: {imported_dataset.name}")
 
 def get_next_id(tracker_file):
     if os.path.exists(tracker_file):
@@ -68,3 +78,7 @@ def load_sample_from_json(filepath):
 
 def get_id_at_index(data, index):
   return list(data[index].keys())[0]
+
+def view_dataset(ds):
+    session = fo.launch_app(ds)
+    session.wait()
