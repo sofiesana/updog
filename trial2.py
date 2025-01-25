@@ -72,9 +72,9 @@ if __name__ == '__main__':
     new_dataset_name = 'test1_' + str(ovelap_threshold) + '_' + classes_for_name+ 'n' +str(num_images)
     matching_threshold = 0.99
     print(new_dataset_name)
-    dm = DatasetMaker(stride_size, save_folder, og_dataset_name, new_dataset_name, allowed_overlap, overlap_threshold=ovelap_threshold)
-    dm.extract_all_objects()
+    dm = DatasetMaker(stride_size, save_folder, og_dataset_name, new_dataset_name, allowed_overlap, overlap_threshold=ovelap_threshold, auto_add=True, )
+    # dm.extract_all_objects()
     dm.print_no_of_available_objects()
-    # dm.run_dataset_maker()
+    dm.run_dataset_maker(skip_extraction=True)
     # evaluate_datasets(og_dataset_name, new_dataset_name, matching_threshold)
     # view_dataset()
