@@ -23,7 +23,7 @@ def evaluate_datasets():
     ds_trans = fo.load_dataset('test1')
     model_name = 'rtdetr-l-coco-torch'
 
-    og_conf, og_f1, trans_conf, trans_f1, avg_matching_score = evaluation.evaluate_datasets(ds_og, ds_trans, model_name, show_images=False)
+    og_conf, og_f1, trans_conf, trans_f1, avg_matching_score = evaluation.evaluate_datasets(ds_og, ds_trans, model_name, max_images=None, show_images=False)
     
     print("OG Conf: ", round(og_conf, 2), " - Transplanted Conf: ", round(trans_conf, 2))
     print("OG F1: ", round(og_f1, 2), " - Transplanted F1: ", round(trans_f1, 2))
