@@ -21,12 +21,29 @@ def get_metrics(predictions, verbose=False):
 
     return mean_conf_og, f1_score_og, detection_bboxs, detection_classes
 
+def get_transplanted_object_metrics(object_id, predictions):
+    results = predictions.evaluate_detections("predictions", gt_field="ground_truth", eval_key="eval")
+    results_ids = results["ytrue_ids"]
+    matching_id_index = results_ids.index(object_id)
+    object_conf = results["confidences"][matching_id_index]
+    object_label = results["ytrue"][matching_id_index]
+    object_pred_class = results["ypred"][matching_id_index]
+    object_iou = results["ious"][matching_id_index]
+
+    if object_label == object_pred_class:
+        correctly_classified = 1
+    else:
+        correctly_classified = 0
+
+    return correctly_classified, object_iou
+
 def evaluate_datasets(og_dataset, transplanted_dataset, model_name, max_images=100, show_images=False):
     model = get_model(model_name)
     stfu()
 
     og_and_trans_metrics = []
     matching_scores = []
+    transplanted_object_metrics = [] # List of tuples (correctly_classified, object_iou)
 
     for idx, sample in enumerate(og_dataset):
         # Get model predictions on base image #
@@ -39,11 +56,14 @@ def evaluate_datasets(og_dataset, transplanted_dataset, model_name, max_images=1
         # Get metrics on base image #
         mean_conf_og, f1_score_og, og_detection_bboxs, og_detection_classes = get_metrics(predictions_og)
 
+        results = predictions_og.evaluate_detections("predictions", gt_field="ground_truth", eval_key="eval")
+
         trans_metrics = []
         match_found = False
         for trans_idx, trans_sample in enumerate(transplanted_dataset):
             if trans_sample.original_image_id == sample.id:
                 match_found = True
+                last_detection_id = trans_sample.ground_truth.detections[-1].id
                 if show_images:
                     show_data_image(trans_sample)
 
@@ -54,6 +74,10 @@ def evaluate_datasets(og_dataset, transplanted_dataset, model_name, max_images=1
                 # Get metrics on new (elephant) image #
                 mean_conf_trans, f1_score_trans, trans_detection_bboxs, trans_detection_classes = get_metrics(predictions_trans)
                 trans_metrics.append((mean_conf_trans, f1_score_trans))
+
+                # Get transplanted object metrics #
+                trans_obj_classified_correctly, trans_obj_iou = get_transplanted_object_metrics(last_detection_id, predictions_trans)
+                transplanted_object_metrics.append((trans_obj_classified_correctly, trans_obj_iou))
 
                 # Get bbox matching score #
                 bbox_matching_score = get_bbox_matching_score(og_detection_bboxs, trans_detection_bboxs, og_detection_classes, trans_detection_classes)
@@ -79,5 +103,8 @@ def evaluate_datasets(og_dataset, transplanted_dataset, model_name, max_images=1
 
     overall_mean_matching_score = np.mean(matching_scores)
 
-    return overall_mean_og_conf, overall_mean_og_f1, overall_mean_trans_conf, overall_mean_trans_f1, overall_mean_matching_score
+    mean_trans_obj_classification_acc = np.mean([m[0] for m in transplanted_object_metrics])
+    mean_trans_obj_iou = np.mean([m[1] for m in transplanted_object_metrics])
+
+    return overall_mean_og_conf, overall_mean_og_f1, overall_mean_trans_conf, overall_mean_trans_f1, overall_mean_matching_score, mean_trans_obj_classification_acc, mean_trans_obj_iou
     
