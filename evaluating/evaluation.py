@@ -33,6 +33,7 @@ def evaluate_datasets(og_dataset, transplanted_dataset, model_name, max_images=1
         if show_images:
             show_data_image(sample)
 
+        # getting predictions form the model on the original image
         predictions_og = og_dataset.match({"filepath": sample.filepath})
         predictions_og.apply_model(model, label_field="predictions")
 
@@ -42,6 +43,8 @@ def evaluate_datasets(og_dataset, transplanted_dataset, model_name, max_images=1
         trans_metrics = []
         match_found = False
         for trans_idx, trans_sample in enumerate(transplanted_dataset):
+            
+            # finding the transplanted images that correspond to the original image
             if trans_sample.original_image_id == sample.id:
                 match_found = True
                 if show_images:
@@ -61,13 +64,13 @@ def evaluate_datasets(og_dataset, transplanted_dataset, model_name, max_images=1
                 # print("   BBox Matching Score: ", bbox_matching_score)
 
         if match_found:
-            # Get the mean transplant metrics for all transplants of that image
+            # Get the mean transplant metrics for all transplants of that original image
             mean_trans_conf = np.mean([m[0] for m in trans_metrics])
             mean_trans_f1 = np.mean([m[1] for m in trans_metrics])
 
             og_and_trans_metrics.append((mean_conf_og, f1_score_og, mean_trans_conf, mean_trans_f1))
 
-        if idx == max_images:
+        if max_images is not None and idx == max_images:
             break
 
 
