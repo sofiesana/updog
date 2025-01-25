@@ -48,12 +48,12 @@ class ImageWithTransplantedObjects():
 
     # Check if the image save location already exists
     if os.path.exists(self.image_save_location):
-        print(f"The image save location already exists. ({self.image_save_location})")
+        # print(f"The image save location already exists. ({self.image_save_location})")
         self.abort = True
 
     # Check if the modified sample path already exists
     if os.path.exists(self.modified_sample_path):
-        print(f"The modified sample path already exists. ({self.modified_sample_path})")
+        # print(f"The modified sample path already exists. ({self.modified_sample_path})")
         self.abort = True
     
 
@@ -82,7 +82,7 @@ class ImageWithTransplantedObjects():
     self.current_object = obj
     self.make_save_paths()
     if self.abort:
-      print("Aborting transplantation.")
+      # print("Aborting transplantation.")
       return
     self.modified_sample = fo.Sample(filepath=self.image_save_location)
     self.setup_modified_sample()
@@ -96,7 +96,7 @@ class ImageWithTransplantedObjects():
 
   def save_transplanted_image(self):
     if self.abort:
-      print("transplantated image not saved as transplantation was aborted")
+      # print("transplantated image not saved as transplantation was aborted")
       return
     self.log_modified_image()
     self.save_image()
