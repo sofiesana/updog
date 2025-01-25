@@ -1,0 +1,87 @@
+[
+    {
+        "6793a8a939aebf8086af4194_261": {
+            "original_image_id": "6793a8a939aebf8086af4194",
+            "image_file_location": "transplantation/outputs\\coco-2017-validation-2\\test1\\test1\\transplanted_images\\transplanted_image_6793a8a939aebf8086af4194_261__x0_y0.jpg",
+            "sample_save_location": "transplantation/outputs\\coco-2017-validation-2\\test1\\test1\\transplanted_samples\\transplanted_6793a8a939aebf8086af4194_261__x0_y0.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793a8a939aebf8086af419a",
+                    "obj_file_location": "transplantation/outputs\\coco-2017-validation-2\\extracted_objects\\6793a8a939aebf8086af4195.pkl",
+                    "location": [
+                        0,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793a8a939aebf8086af4194_262": {
+            "original_image_id": "6793a8a939aebf8086af4194",
+            "image_file_location": "transplantation/outputs\\coco-2017-validation-2\\test1\\test1\\transplanted_images\\transplanted_image_6793a8a939aebf8086af4194_262__x200_y0.jpg",
+            "sample_save_location": "transplantation/outputs\\coco-2017-validation-2\\test1\\test1\\transplanted_samples\\transplanted_6793a8a939aebf8086af4194_262__x200_y0.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793a8a939aebf8086af419a",
+                    "obj_file_location": "transplantation/outputs\\coco-2017-validation-2\\extracted_objects\\6793a8a939aebf8086af4195.pkl",
+                    "location": [
+                        200,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793a8a939aebf8086af4194_263": {
+            "original_image_id": "6793a8a939aebf8086af4194",
+            "image_file_location": "transplantation/outputs\\coco-2017-validation-2\\test1\\test1\\transplanted_images\\transplanted_image_6793a8a939aebf8086af4194_263__x0_y0.jpg",
+            "sample_save_location": "transplantation/outputs\\coco-2017-validation-2\\test1\\test1\\transplanted_samples\\transplanted_6793a8a939aebf8086af4194_263__x0_y0.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793a8a939aebf8086af419a",
+                    "obj_file_location": "transplantation/outputs\\coco-2017-validation-2\\extracted_objects\\6793a8a939aebf8086af4196.pkl",
+                    "location": [
+                        0,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793a8a939aebf8086af4194_264": {
+            "original_image_id": "6793a8a939aebf8086af4194",
+            "image_file_location": "transplantation/outputs\\coco-2017-validation-2\\test1\\test1\\transplanted_images\\transplanted_image_6793a8a939aebf8086af4194_264__x200_y0.jpg",
+            "sample_save_location": "transplantation/outputs\\coco-2017-validation-2\\test1\\test1\\transplanted_samples\\transplanted_6793a8a939aebf8086af4194_264__x200_y0.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793a8a939aebf8086af419a",
+                    "obj_file_location": "transplantation/outputs\\coco-2017-validation-2\\extracted_objects\\6793a8a939aebf8086af4196.pkl",
+                    "location": [
+                        200,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793a8a939aebf8086af4194_265": {
+            "original_image_id": "6793a8a939aebf8086af4194",
+            "image_file_location": "transplantation/outputs\\coco-2017-validation-2\\test1\\test1\\transplanted_images\\transplanted_image_6793a8a939aebf8086af4194_265__x400_y0.jpg",
+            "sample_save_location": "transplantation/outputs\\coco-2017-validation-2\\test1\\test1\\transplanted_samples\\transplanted_6793a8a939aebf8086af4194_265__x400_y0.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793a8a939aebf8086af419a",
+                    "obj_file_location": "transplantation/outputs\\coco-2017-validation-2\\extracted_objects\\6793a8a939aebf8086af4196.pkl",
+                    "location": [
+                        400,
+                        0
+                    ]
+                }
+            }
+        }
+    }
+]
