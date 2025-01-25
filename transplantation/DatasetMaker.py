@@ -6,6 +6,7 @@ from .utils import get_id_at_index
 import fiftyone as fo
 from .ExtractedObject import ExtractedObject
 from PIL import Image
+import shutil
 
 class DatasetMaker():
     def __init__(self, stride_size, save_folder, og_dataset_name, new_dataset_name, allow_overlap=False):
@@ -13,14 +14,14 @@ class DatasetMaker():
         self.og_dataset_name = og_dataset_name
         self.og_dataset = fo.load_dataset(og_dataset_name)
         self.new_dataset_name = new_dataset_name
-        self.dataset = None
-        self.check_dataset_availability()
-        self.dataset.persistent = True
         self.allow_overlap = allow_overlap
         self.save_location = save_folder
         self.save_folder = os.path.join(save_folder, og_dataset_name)
         self.current_og_sample = None
+        self.dataset = None
         self.dataset_save_location = os.path.join(self.save_folder, new_dataset_name)
+        self.check_dataset_availability()
+        self.dataset.persistent = True
         
     
     def check_dataset_availability(self):
@@ -31,6 +32,9 @@ class DatasetMaker():
                 print(f"Deleting dataset {self.new_dataset_name}. Creating a new dataset for {self.new_dataset_name}.")
                 fo.delete_dataset(self.new_dataset_name)
                 self.dataset = fo.Dataset(name=self.new_dataset_name)
+                if os.path.exists(self.dataset_save_location):
+                    shutil.rmtree(self.dataset_save_location)
+                    print(f"Folder '{self.dataset_save_location}' has been deleted.")
             elif choice == 'add':
                 print(f"Adding to the existing dataset {self.new_dataset_name}.")
                 self.dataset = fo.load_dataset(self.new_dataset_name)
@@ -41,9 +45,8 @@ class DatasetMaker():
             self.dataset = fo.Dataset(name=self.new_dataset_name)
 
     def extract_all_objects(self):
-        print("extracting")
+        print("Extracting Objects")
         for sample in self.og_dataset:
-            print("test")
             obj_extract = ImageObjectExtractor(sample, save_location=self.save_location, filter=True, filter_type="min", og_dataset_name=self.og_dataset_name)
             obj_extract.extract_objects()
 
@@ -55,6 +58,7 @@ class DatasetMaker():
 
         for sample in self.og_dataset:
             self.current_og_sample = sample
+            print(f"TRANSPLANTING INTO IMAGE {sample.id}")
             for i in range(len(objects_log)):
                 id = get_id_at_index(objects_log, i)
                 og_image_id = objects_log[i][id]['og_image_id']
@@ -70,7 +74,6 @@ class DatasetMaker():
 
     def transplant_with_sliding_window(self, obj):
         image_width, image_height = Image.open(self.current_og_sample.filepath).size
-        print("Image size: ", image_height, image_width)
         obj_width, obj_height = obj.mask.shape[1], obj.mask.shape[0]
 
         for y in range(0, image_height - obj_height + 1, self.stride_size):
