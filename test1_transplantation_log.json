@@ -1698,5 +1698,1025 @@
                 }
             }
         }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_366": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_366__x0_y0.jpg",
+            "sample_save_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_366__x0_y0.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793bb56aeedc985824fbdb9",
+                    "obj_file_location": "transplantation/outputs/coco-2017-validation-2/extracted_objects/6793bb56aeedc985824fbdb4.pkl",
+                    "location": [
+                        0,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_367": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_367__x200_y0.jpg",
+            "sample_save_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_367__x200_y0.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793bb56aeedc985824fbdb9",
+                    "obj_file_location": "transplantation/outputs/coco-2017-validation-2/extracted_objects/6793bb56aeedc985824fbdb4.pkl",
+                    "location": [
+                        200,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_368": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_368__x0_y0.jpg",
+            "sample_save_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_368__x0_y0.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793bb56aeedc985824fbdb9",
+                    "obj_file_location": "transplantation/outputs/coco-2017-validation-2/extracted_objects/6793bb56aeedc985824fbdb5.pkl",
+                    "location": [
+                        0,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_369": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_369__x200_y0.jpg",
+            "sample_save_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_369__x200_y0.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793bb56aeedc985824fbdb9",
+                    "obj_file_location": "transplantation/outputs/coco-2017-validation-2/extracted_objects/6793bb56aeedc985824fbdb5.pkl",
+                    "location": [
+                        200,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_370": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_370__x400_y0.jpg",
+            "sample_save_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_370__x400_y0.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793bb56aeedc985824fbdb9",
+                    "obj_file_location": "transplantation/outputs/coco-2017-validation-2/extracted_objects/6793bb56aeedc985824fbdb5.pkl",
+                    "location": [
+                        400,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_371": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_371__x0_y0.jpg",
+            "sample_save_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_371__x0_y0.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793bb56aeedc985824fbdb9",
+                    "obj_file_location": "transplantation/outputs/coco-2017-validation-2/extracted_objects/6793bb56aeedc985824fbdb4.pkl",
+                    "location": [
+                        0,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_372": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_372__x200_y0.jpg",
+            "sample_save_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_372__x200_y0.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793bb56aeedc985824fbdb9",
+                    "obj_file_location": "transplantation/outputs/coco-2017-validation-2/extracted_objects/6793bb56aeedc985824fbdb4.pkl",
+                    "location": [
+                        200,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_373": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_373__x0_y0.jpg",
+            "sample_save_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_373__x0_y0.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793bb56aeedc985824fbdb9",
+                    "obj_file_location": "transplantation/outputs/coco-2017-validation-2/extracted_objects/6793bb56aeedc985824fbdb5.pkl",
+                    "location": [
+                        0,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_374": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_374__x200_y0.jpg",
+            "sample_save_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_374__x200_y0.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793bb56aeedc985824fbdb9",
+                    "obj_file_location": "transplantation/outputs/coco-2017-validation-2/extracted_objects/6793bb56aeedc985824fbdb5.pkl",
+                    "location": [
+                        200,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_375": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_375__x400_y0.jpg",
+            "sample_save_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_375__x400_y0.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793bb56aeedc985824fbdb9",
+                    "obj_file_location": "transplantation/outputs/coco-2017-validation-2/extracted_objects/6793bb56aeedc985824fbdb5.pkl",
+                    "location": [
+                        400,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_376": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_376__x0_y0.jpg",
+            "sample_save_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_376__x0_y0.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793bb56aeedc985824fbdb9",
+                    "obj_file_location": "transplantation/outputs/coco-2017-validation-2/extracted_objects/6793bb56aeedc985824fbdb4.pkl",
+                    "location": [
+                        0,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_377": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_377__x200_y0.jpg",
+            "sample_save_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_377__x200_y0.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793bb56aeedc985824fbdb9",
+                    "obj_file_location": "transplantation/outputs/coco-2017-validation-2/extracted_objects/6793bb56aeedc985824fbdb4.pkl",
+                    "location": [
+                        200,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_378": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_378__x0_y0.jpg",
+            "sample_save_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_378__x0_y0.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793bb56aeedc985824fbdb9",
+                    "obj_file_location": "transplantation/outputs/coco-2017-validation-2/extracted_objects/6793bb56aeedc985824fbdb5.pkl",
+                    "location": [
+                        0,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_379": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_379__x200_y0.jpg",
+            "sample_save_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_379__x200_y0.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793bb56aeedc985824fbdb9",
+                    "obj_file_location": "transplantation/outputs/coco-2017-validation-2/extracted_objects/6793bb56aeedc985824fbdb5.pkl",
+                    "location": [
+                        200,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_380": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_380__x400_y0.jpg",
+            "sample_save_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_380__x400_y0.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793bb56aeedc985824fbdb9",
+                    "obj_file_location": "transplantation/outputs/coco-2017-validation-2/extracted_objects/6793bb56aeedc985824fbdb5.pkl",
+                    "location": [
+                        400,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_381": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_381__x0_y0.jpg",
+            "sample_save_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_381__x0_y0.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793bb56aeedc985824fbdb9",
+                    "obj_file_location": "transplantation/outputs/coco-2017-validation-2/extracted_objects/6793bb56aeedc985824fbdb4.pkl",
+                    "location": [
+                        0,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_382": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_382__x200_y0.jpg",
+            "sample_save_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_382__x200_y0.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793bb56aeedc985824fbdb9",
+                    "obj_file_location": "transplantation/outputs/coco-2017-validation-2/extracted_objects/6793bb56aeedc985824fbdb4.pkl",
+                    "location": [
+                        200,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_383": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_383__x0_y0.jpg",
+            "sample_save_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_383__x0_y0.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793bb56aeedc985824fbdb9",
+                    "obj_file_location": "transplantation/outputs/coco-2017-validation-2/extracted_objects/6793bb56aeedc985824fbdb5.pkl",
+                    "location": [
+                        0,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_384": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_384__x200_y0.jpg",
+            "sample_save_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_384__x200_y0.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793bb56aeedc985824fbdb9",
+                    "obj_file_location": "transplantation/outputs/coco-2017-validation-2/extracted_objects/6793bb56aeedc985824fbdb5.pkl",
+                    "location": [
+                        200,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_385": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_385__x400_y0.jpg",
+            "sample_save_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_385__x400_y0.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793bb56aeedc985824fbdb9",
+                    "obj_file_location": "transplantation/outputs/coco-2017-validation-2/extracted_objects/6793bb56aeedc985824fbdb5.pkl",
+                    "location": [
+                        400,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_386": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_386__x0_y0.jpg",
+            "sample_save_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_386__x0_y0.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793bb56aeedc985824fbdb9",
+                    "obj_file_location": "transplantation/outputs/coco-2017-validation-2/extracted_objects/6793bb56aeedc985824fbdb4.pkl",
+                    "location": [
+                        0,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_387": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_387__x200_y0.jpg",
+            "sample_save_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_387__x200_y0.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793bb56aeedc985824fbdb9",
+                    "obj_file_location": "transplantation/outputs/coco-2017-validation-2/extracted_objects/6793bb56aeedc985824fbdb4.pkl",
+                    "location": [
+                        200,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_388": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_388__x0_y0.jpg",
+            "sample_save_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_388__x0_y0.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793bb56aeedc985824fbdb9",
+                    "obj_file_location": "transplantation/outputs/coco-2017-validation-2/extracted_objects/6793bb56aeedc985824fbdb5.pkl",
+                    "location": [
+                        0,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_389": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_389__x200_y0.jpg",
+            "sample_save_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_389__x200_y0.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793bb56aeedc985824fbdb9",
+                    "obj_file_location": "transplantation/outputs/coco-2017-validation-2/extracted_objects/6793bb56aeedc985824fbdb5.pkl",
+                    "location": [
+                        200,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_390": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_390__x400_y0.jpg",
+            "sample_save_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_390__x400_y0.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793bb56aeedc985824fbdb9",
+                    "obj_file_location": "transplantation/outputs/coco-2017-validation-2/extracted_objects/6793bb56aeedc985824fbdb5.pkl",
+                    "location": [
+                        400,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_391": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_391__x0_y0.jpg",
+            "sample_save_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_391__x0_y0.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793bb56aeedc985824fbdb9",
+                    "obj_file_location": "transplantation/outputs/coco-2017-validation-2/extracted_objects/6793bb56aeedc985824fbdb4.pkl",
+                    "location": [
+                        0,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_392": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_392__x200_y0.jpg",
+            "sample_save_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_392__x200_y0.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793bb56aeedc985824fbdb9",
+                    "obj_file_location": "transplantation/outputs/coco-2017-validation-2/extracted_objects/6793bb56aeedc985824fbdb4.pkl",
+                    "location": [
+                        200,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_393": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_393__x0_y0.jpg",
+            "sample_save_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_393__x0_y0.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793bb56aeedc985824fbdb9",
+                    "obj_file_location": "transplantation/outputs/coco-2017-validation-2/extracted_objects/6793bb56aeedc985824fbdb5.pkl",
+                    "location": [
+                        0,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_394": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_394__x200_y0.jpg",
+            "sample_save_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_394__x200_y0.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793bb56aeedc985824fbdb9",
+                    "obj_file_location": "transplantation/outputs/coco-2017-validation-2/extracted_objects/6793bb56aeedc985824fbdb5.pkl",
+                    "location": [
+                        200,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_395": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_395__x400_y0.jpg",
+            "sample_save_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_395__x400_y0.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793bb56aeedc985824fbdb9",
+                    "obj_file_location": "transplantation/outputs/coco-2017-validation-2/extracted_objects/6793bb56aeedc985824fbdb5.pkl",
+                    "location": [
+                        400,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_396": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_396__x0_y0.jpg",
+            "sample_save_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_396__x0_y0.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793bb56aeedc985824fbdb9",
+                    "obj_file_location": "transplantation/outputs/coco-2017-validation-2/extracted_objects/6793bb56aeedc985824fbdb4.pkl",
+                    "location": [
+                        0,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_397": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_397__x200_y0.jpg",
+            "sample_save_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_397__x200_y0.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793bb56aeedc985824fbdb9",
+                    "obj_file_location": "transplantation/outputs/coco-2017-validation-2/extracted_objects/6793bb56aeedc985824fbdb4.pkl",
+                    "location": [
+                        200,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_398": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_398__x0_y0.jpg",
+            "sample_save_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_398__x0_y0.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793bb56aeedc985824fbdb9",
+                    "obj_file_location": "transplantation/outputs/coco-2017-validation-2/extracted_objects/6793bb56aeedc985824fbdb5.pkl",
+                    "location": [
+                        0,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_399": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_399__x200_y0.jpg",
+            "sample_save_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_399__x200_y0.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793bb56aeedc985824fbdb9",
+                    "obj_file_location": "transplantation/outputs/coco-2017-validation-2/extracted_objects/6793bb56aeedc985824fbdb5.pkl",
+                    "location": [
+                        200,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_400": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_400__x400_y0.jpg",
+            "sample_save_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_400__x400_y0.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793bb56aeedc985824fbdb9",
+                    "obj_file_location": "transplantation/outputs/coco-2017-validation-2/extracted_objects/6793bb56aeedc985824fbdb5.pkl",
+                    "location": [
+                        400,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_401": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_401__x0_y0.jpg",
+            "sample_save_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_401__x0_y0.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793bb56aeedc985824fbdb9",
+                    "obj_file_location": "transplantation/outputs/coco-2017-validation-2/extracted_objects/6793bb56aeedc985824fbdb4.pkl",
+                    "location": [
+                        0,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_402": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_402__x200_y0.jpg",
+            "sample_save_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_402__x200_y0.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793bb56aeedc985824fbdb9",
+                    "obj_file_location": "transplantation/outputs/coco-2017-validation-2/extracted_objects/6793bb56aeedc985824fbdb4.pkl",
+                    "location": [
+                        200,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_403": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_403__x0_y0.jpg",
+            "sample_save_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_403__x0_y0.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793bb56aeedc985824fbdb9",
+                    "obj_file_location": "transplantation/outputs/coco-2017-validation-2/extracted_objects/6793bb56aeedc985824fbdb5.pkl",
+                    "location": [
+                        0,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_404": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_404__x200_y0.jpg",
+            "sample_save_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_404__x200_y0.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793bb56aeedc985824fbdb9",
+                    "obj_file_location": "transplantation/outputs/coco-2017-validation-2/extracted_objects/6793bb56aeedc985824fbdb5.pkl",
+                    "location": [
+                        200,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_405": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_405__x400_y0.jpg",
+            "sample_save_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_405__x400_y0.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793bb56aeedc985824fbdb9",
+                    "obj_file_location": "transplantation/outputs/coco-2017-validation-2/extracted_objects/6793bb56aeedc985824fbdb5.pkl",
+                    "location": [
+                        400,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_406": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_406__x0_y0.jpg",
+            "sample_save_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_406__x0_y0.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793bb56aeedc985824fbdb9",
+                    "obj_file_location": "transplantation/outputs/coco-2017-validation-2/extracted_objects/6793bb56aeedc985824fbdb4.pkl",
+                    "location": [
+                        0,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_407": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_407__x200_y0.jpg",
+            "sample_save_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_407__x200_y0.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793bb56aeedc985824fbdb9",
+                    "obj_file_location": "transplantation/outputs/coco-2017-validation-2/extracted_objects/6793bb56aeedc985824fbdb4.pkl",
+                    "location": [
+                        200,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_408": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_408__x0_y0.jpg",
+            "sample_save_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_408__x0_y0.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793bb56aeedc985824fbdb9",
+                    "obj_file_location": "transplantation/outputs/coco-2017-validation-2/extracted_objects/6793bb56aeedc985824fbdb5.pkl",
+                    "location": [
+                        0,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_409": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_409__x200_y0.jpg",
+            "sample_save_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_409__x200_y0.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793bb56aeedc985824fbdb9",
+                    "obj_file_location": "transplantation/outputs/coco-2017-validation-2/extracted_objects/6793bb56aeedc985824fbdb5.pkl",
+                    "location": [
+                        200,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_410": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_410__x400_y0.jpg",
+            "sample_save_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_410__x400_y0.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793bb56aeedc985824fbdb9",
+                    "obj_file_location": "transplantation/outputs/coco-2017-validation-2/extracted_objects/6793bb56aeedc985824fbdb5.pkl",
+                    "location": [
+                        400,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_411": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_411__x0_y0.jpg",
+            "sample_save_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_411__x0_y0.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793bb56aeedc985824fbdb9",
+                    "obj_file_location": "transplantation/outputs/coco-2017-validation-2/extracted_objects/6793bb56aeedc985824fbdb4.pkl",
+                    "location": [
+                        0,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_412": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_412__x200_y0.jpg",
+            "sample_save_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_412__x200_y0.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793bb56aeedc985824fbdb9",
+                    "obj_file_location": "transplantation/outputs/coco-2017-validation-2/extracted_objects/6793bb56aeedc985824fbdb4.pkl",
+                    "location": [
+                        200,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_413": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_413__x0_y0.jpg",
+            "sample_save_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_413__x0_y0.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793bb56aeedc985824fbdb9",
+                    "obj_file_location": "transplantation/outputs/coco-2017-validation-2/extracted_objects/6793bb56aeedc985824fbdb5.pkl",
+                    "location": [
+                        0,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_414": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_414__x200_y0.jpg",
+            "sample_save_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_414__x200_y0.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793bb56aeedc985824fbdb9",
+                    "obj_file_location": "transplantation/outputs/coco-2017-validation-2/extracted_objects/6793bb56aeedc985824fbdb5.pkl",
+                    "location": [
+                        200,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_415": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_415__x400_y0.jpg",
+            "sample_save_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_415__x400_y0.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793bb56aeedc985824fbdb9",
+                    "obj_file_location": "transplantation/outputs/coco-2017-validation-2/extracted_objects/6793bb56aeedc985824fbdb5.pkl",
+                    "location": [
+                        400,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_416": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_416__x0_y0.jpg",
+            "sample_save_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_416__x0_y0.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793bb56aeedc985824fbdb9",
+                    "obj_file_location": "transplantation/outputs/coco-2017-validation-2/extracted_objects/6793bb56aeedc985824fbdb4.pkl",
+                    "location": [
+                        0,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_417": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_417__x200_y0.jpg",
+            "sample_save_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_417__x200_y0.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793bb56aeedc985824fbdb9",
+                    "obj_file_location": "transplantation/outputs/coco-2017-validation-2/extracted_objects/6793bb56aeedc985824fbdb4.pkl",
+                    "location": [
+                        200,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_418": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_418__x0_y0.jpg",
+            "sample_save_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_418__x0_y0.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793bb56aeedc985824fbdb9",
+                    "obj_file_location": "transplantation/outputs/coco-2017-validation-2/extracted_objects/6793bb56aeedc985824fbdb5.pkl",
+                    "location": [
+                        0,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_419": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_419__x200_y0.jpg",
+            "sample_save_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_419__x200_y0.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793bb56aeedc985824fbdb9",
+                    "obj_file_location": "transplantation/outputs/coco-2017-validation-2/extracted_objects/6793bb56aeedc985824fbdb5.pkl",
+                    "location": [
+                        200,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_420": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_420__x400_y0.jpg",
+            "sample_save_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_420__x400_y0.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793bb56aeedc985824fbdb9",
+                    "obj_file_location": "transplantation/outputs/coco-2017-validation-2/extracted_objects/6793bb56aeedc985824fbdb5.pkl",
+                    "location": [
+                        400,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_421": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_421__x0_y0.jpg",
+            "sample_save_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_421__x0_y0.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793bb56aeedc985824fbdb9",
+                    "obj_file_location": "transplantation/outputs/coco-2017-validation-2/extracted_objects/6793bb56aeedc985824fbdb4.pkl",
+                    "location": [
+                        0,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_422": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_422__x200_y0.jpg",
+            "sample_save_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_422__x200_y0.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793bb56aeedc985824fbdb9",
+                    "obj_file_location": "transplantation/outputs/coco-2017-validation-2/extracted_objects/6793bb56aeedc985824fbdb4.pkl",
+                    "location": [
+                        200,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_423": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_423__x0_y0.jpg",
+            "sample_save_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_423__x0_y0.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793bb56aeedc985824fbdb9",
+                    "obj_file_location": "transplantation/outputs/coco-2017-validation-2/extracted_objects/6793bb56aeedc985824fbdb5.pkl",
+                    "location": [
+                        0,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_424": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_424__x200_y0.jpg",
+            "sample_save_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_424__x200_y0.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793bb56aeedc985824fbdb9",
+                    "obj_file_location": "transplantation/outputs/coco-2017-validation-2/extracted_objects/6793bb56aeedc985824fbdb5.pkl",
+                    "location": [
+                        200,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_425": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_425__x400_y0.jpg",
+            "sample_save_location": "transplantation/outputs/coco-2017-validation-2/test1/test1/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_425__x400_y0.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793bb56aeedc985824fbdb9",
+                    "obj_file_location": "transplantation/outputs/coco-2017-validation-2/extracted_objects/6793bb56aeedc985824fbdb5.pkl",
+                    "location": [
+                        400,
+                        0
+                    ]
+                }
+            }
+        }
     }
 ]

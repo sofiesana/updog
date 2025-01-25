@@ -8,6 +8,7 @@ import pickle as pkl
 import json
 import fiftyone as fo
 import copy
+import cv2
 
 class ImageWithTransplantedObjects():
   def __init__(self, sample, save_location, dataset_name, filename_appendix=None):
@@ -151,10 +152,13 @@ class ImageWithTransplantedObjects():
   
   def update_modified_sample_with_transplant(self, obj, location):
         # print("updating modified sample")
-        # print(self.og_image.size)
-        # print(obj.og_img_dimensions)
-        new_width = (obj.box[2]*obj.og_img_dimensions[0]) /self.og_image.size[1]
-        new_height = (obj.box[3]*obj.og_img_dimensions[1]) /self.og_image.size[0]
+        # print("OG Image Size: ", self.og_image.size)
+        # print("OG Img dimensions: ", obj.og_img_dimensions)
+        # print("Box: ", obj.box) 
+        # print("Location: ", location)
+
+        new_width = obj.box[2] * (obj.og_img_dimensions[1]/self.og_image.size[0])
+        new_height = obj.box[3] * (obj.og_img_dimensions[0]/self.og_image.size[1])
         new_bbox = [location[0]/self.og_image.size[0], location[1]/self.og_image.size[1], new_width, new_height]
         new_segmentation = obj.mask
         # print(new_bbox, new_segmentation)
@@ -169,6 +173,7 @@ class ImageWithTransplantedObjects():
                     mask=new_segmentation
                 )
         self.modified_sample["ground_truth"].detections.append(new_detection)
+
         # print(self.modified_sample["ground_truth"].detections)
         # self.modified_sample.save()
         
