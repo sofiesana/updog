@@ -3208,5 +3208,659 @@
                 }
             }
         }
+    },
+    {
+        "6793acde4a6e6ce8c83f72d1_17": {
+            "original_image_id": "6793acde4a6e6ce8c83f72d1",
+            "image_file_location": "transplantation/outputs/testing/transplanted_images/transplanted_image_6793acde4a6e6ce8c83f72d1_17.jpg",
+            "sample_save_location": "transplantation/outputs/testing/transplanted_samples/transplanted_6793acde4a6e6ce8c83f72d1_17.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793acde4a6e6ce8c83f72d1",
+                    "obj_file_location": "transplantation/outputs/extracted_objects/elephant_6793acde4a6e6ce8c83f72d1.pkl",
+                    "location": [
+                        0,
+                        0
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793acde4a6e6ce8c83f72d1_18": {
+            "original_image_id": "6793acde4a6e6ce8c83f72d1",
+            "image_file_location": "transplantation/outputs/testing/transplanted_images/transplanted_image_6793acde4a6e6ce8c83f72d1_18.jpg",
+            "sample_save_location": "transplantation/outputs/testing/transplanted_samples/transplanted_6793acde4a6e6ce8c83f72d1_18.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793acde4a6e6ce8c83f72d1",
+                    "obj_file_location": "transplantation/outputs/extracted_objects/person_6793acde4a6e6ce8c83f72d1.pkl",
+                    "location": [
+                        0,
+                        0
+                    ]
+                },
+                "2": {
+                    "object_id": "6793acde4a6e6ce8c83f72d1",
+                    "obj_file_location": "transplantation/outputs/extracted_objects/person_6793acde4a6e6ce8c83f72d1.pkl",
+                    "location": [
+                        200,
+                        200
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_19": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/testing/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_19.jpg",
+            "sample_save_location": "transplantation/outputs/testing/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_19.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793a8a939aebf8086af419a",
+                    "obj_file_location": "transplantation/outputs\\extracted_objects\\elephant_6793a8a939aebf8086af419a.pkl",
+                    "location": [
+                        50,
+                        50
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_20": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/testing/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_20.jpg",
+            "sample_save_location": "transplantation/outputs/testing/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_20.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793a8a939aebf8086af419a",
+                    "obj_file_location": "transplantation/outputs\\extracted_objects\\elephant_6793a8a939aebf8086af419a_19.pkl",
+                    "location": [
+                        50,
+                        50
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_21": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/testing/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_21.jpg",
+            "sample_save_location": "transplantation/outputs/testing/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_21.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793acde4a6e6ce8c83f72d1",
+                    "obj_file_location": "transplantation/outputs/extracted_objects/person_6793acde4a6e6ce8c83f72d1.pkl",
+                    "location": [
+                        50,
+                        50
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_22": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/testing/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_22.jpg",
+            "sample_save_location": "transplantation/outputs/testing/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_22.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793a8a939aebf8086af419a",
+                    "obj_file_location": "transplantation/outputs\\extracted_objects\\elephant_6793a8a939aebf8086af419a_18.pkl",
+                    "location": [
+                        50,
+                        50
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_23": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/testing/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_23.jpg",
+            "sample_save_location": "transplantation/outputs/testing/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_23.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793a8a939aebf8086af4194",
+                    "obj_file_location": "transplantation/outputs\\extracted_objects\\elephant_6793a8a939aebf8086af4194.pkl",
+                    "location": [
+                        50,
+                        50
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_24": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/testing/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_24.jpg",
+            "sample_save_location": "transplantation/outputs/testing/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_24.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793bb56aeedc985824fbdb9",
+                    "obj_file_location": "transplantation/outputs/extracted_objects/elephant_6793bb56aeedc985824fbdb9.pkl",
+                    "location": [
+                        50,
+                        50
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_25": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/testing/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_25.jpg",
+            "sample_save_location": "transplantation/outputs/testing/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_25.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "679168327db12f83cc74f6e4",
+                    "obj_file_location": "transplantation/outputs\\extracted_objects\\person_679168327db12f83cc74f6e4.pkl",
+                    "location": [
+                        50,
+                        50
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_26": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/testing/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_26.jpg",
+            "sample_save_location": "transplantation/outputs/testing/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_26.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793bb56aeedc985824fbdb9",
+                    "obj_file_location": "transplantation/outputs/extracted_objects/elephant_6793bb56aeedc985824fbdb9_21.pkl",
+                    "location": [
+                        50,
+                        50
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_27": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/testing/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_27.jpg",
+            "sample_save_location": "transplantation/outputs/testing/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_27.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793bb56aeedc985824fbdb9",
+                    "obj_file_location": "transplantation/outputs/extracted_objects/elephant_6793bb56aeedc985824fbdb9_20.pkl",
+                    "location": [
+                        50,
+                        50
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_28": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/testing/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_28.jpg",
+            "sample_save_location": "transplantation/outputs/testing/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_28.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793bb56aeedc985824fbdb9",
+                    "obj_file_location": "transplantation/outputs/extracted_objects/elephant_6793bb56aeedc985824fbdb9_22.pkl",
+                    "location": [
+                        50,
+                        50
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_29": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/testing/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_29.jpg",
+            "sample_save_location": "transplantation/outputs/testing/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_29.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793bb56aeedc985824fbdb9",
+                    "obj_file_location": "transplantation/outputs/extracted_objects/elephant_6793bb56aeedc985824fbdb9_23.pkl",
+                    "location": [
+                        50,
+                        50
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_30": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/testing/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_30.jpg",
+            "sample_save_location": "transplantation/outputs/testing/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_30.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793bb56aeedc985824fbdb3",
+                    "obj_file_location": "transplantation/outputs/extracted_objects/person_6793bb56aeedc985824fbdb3.pkl",
+                    "location": [
+                        50,
+                        50
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_31": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/testing/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_31.jpg",
+            "sample_save_location": "transplantation/outputs/testing/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_31.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793a8a939aebf8086af4194",
+                    "obj_file_location": "transplantation/outputs\\extracted_objects\\person_6793a8a939aebf8086af4194.pkl",
+                    "location": [
+                        50,
+                        50
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_32": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/testing/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_32.jpg",
+            "sample_save_location": "transplantation/outputs/testing/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_32.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793acde4a6e6ce8c83f72d1",
+                    "obj_file_location": "transplantation/outputs/extracted_objects/elephant_6793acde4a6e6ce8c83f72d1.pkl",
+                    "location": [
+                        50,
+                        50
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_33": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/testing/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_33.jpg",
+            "sample_save_location": "transplantation/outputs/testing/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_33.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "679168327db12f83cc74f6e4",
+                    "obj_file_location": "transplantation/outputs\\extracted_objects\\elephant_679168327db12f83cc74f6e4.pkl",
+                    "location": [
+                        50,
+                        50
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_34": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/testing/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_34.jpg",
+            "sample_save_location": "transplantation/outputs/testing/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_34.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793bb56aeedc985824fbdb3",
+                    "obj_file_location": "transplantation/outputs/extracted_objects/elephant_6793bb56aeedc985824fbdb3.pkl",
+                    "location": [
+                        50,
+                        50
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_35": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/testing/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_35.jpg",
+            "sample_save_location": "transplantation/outputs/testing/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_35.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793a8a939aebf8086af419a",
+                    "obj_file_location": "transplantation/outputs\\extracted_objects\\elephant_6793a8a939aebf8086af419a_16.pkl",
+                    "location": [
+                        50,
+                        50
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb3_36": {
+            "original_image_id": "6793bb56aeedc985824fbdb3",
+            "image_file_location": "transplantation/outputs/testing/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb3_36.jpg",
+            "sample_save_location": "transplantation/outputs/testing/transplanted_samples/transplanted_6793bb56aeedc985824fbdb3_36.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793a8a939aebf8086af419a",
+                    "obj_file_location": "transplantation/outputs\\extracted_objects\\elephant_6793a8a939aebf8086af419a_17.pkl",
+                    "location": [
+                        50,
+                        50
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb9_37": {
+            "original_image_id": "6793bb56aeedc985824fbdb9",
+            "image_file_location": "transplantation/outputs/testing/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb9_37.jpg",
+            "sample_save_location": "transplantation/outputs/testing/transplanted_samples/transplanted_6793bb56aeedc985824fbdb9_37.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793a8a939aebf8086af419a",
+                    "obj_file_location": "transplantation/outputs\\extracted_objects\\elephant_6793a8a939aebf8086af419a.pkl",
+                    "location": [
+                        50,
+                        50
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb9_38": {
+            "original_image_id": "6793bb56aeedc985824fbdb9",
+            "image_file_location": "transplantation/outputs/testing/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb9_38.jpg",
+            "sample_save_location": "transplantation/outputs/testing/transplanted_samples/transplanted_6793bb56aeedc985824fbdb9_38.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793a8a939aebf8086af419a",
+                    "obj_file_location": "transplantation/outputs\\extracted_objects\\elephant_6793a8a939aebf8086af419a_19.pkl",
+                    "location": [
+                        50,
+                        50
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb9_39": {
+            "original_image_id": "6793bb56aeedc985824fbdb9",
+            "image_file_location": "transplantation/outputs/testing/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb9_39.jpg",
+            "sample_save_location": "transplantation/outputs/testing/transplanted_samples/transplanted_6793bb56aeedc985824fbdb9_39.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793acde4a6e6ce8c83f72d1",
+                    "obj_file_location": "transplantation/outputs/extracted_objects/person_6793acde4a6e6ce8c83f72d1.pkl",
+                    "location": [
+                        50,
+                        50
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb9_40": {
+            "original_image_id": "6793bb56aeedc985824fbdb9",
+            "image_file_location": "transplantation/outputs/testing/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb9_40.jpg",
+            "sample_save_location": "transplantation/outputs/testing/transplanted_samples/transplanted_6793bb56aeedc985824fbdb9_40.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793a8a939aebf8086af419a",
+                    "obj_file_location": "transplantation/outputs\\extracted_objects\\elephant_6793a8a939aebf8086af419a_18.pkl",
+                    "location": [
+                        50,
+                        50
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb9_41": {
+            "original_image_id": "6793bb56aeedc985824fbdb9",
+            "image_file_location": "transplantation/outputs/testing/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb9_41.jpg",
+            "sample_save_location": "transplantation/outputs/testing/transplanted_samples/transplanted_6793bb56aeedc985824fbdb9_41.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793a8a939aebf8086af4194",
+                    "obj_file_location": "transplantation/outputs\\extracted_objects\\elephant_6793a8a939aebf8086af4194.pkl",
+                    "location": [
+                        50,
+                        50
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb9_42": {
+            "original_image_id": "6793bb56aeedc985824fbdb9",
+            "image_file_location": "transplantation/outputs/testing/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb9_42.jpg",
+            "sample_save_location": "transplantation/outputs/testing/transplanted_samples/transplanted_6793bb56aeedc985824fbdb9_42.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793bb56aeedc985824fbdb9",
+                    "obj_file_location": "transplantation/outputs/extracted_objects/elephant_6793bb56aeedc985824fbdb9.pkl",
+                    "location": [
+                        50,
+                        50
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb9_43": {
+            "original_image_id": "6793bb56aeedc985824fbdb9",
+            "image_file_location": "transplantation/outputs/testing/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb9_43.jpg",
+            "sample_save_location": "transplantation/outputs/testing/transplanted_samples/transplanted_6793bb56aeedc985824fbdb9_43.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "679168327db12f83cc74f6e4",
+                    "obj_file_location": "transplantation/outputs\\extracted_objects\\person_679168327db12f83cc74f6e4.pkl",
+                    "location": [
+                        50,
+                        50
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb9_44": {
+            "original_image_id": "6793bb56aeedc985824fbdb9",
+            "image_file_location": "transplantation/outputs/testing/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb9_44.jpg",
+            "sample_save_location": "transplantation/outputs/testing/transplanted_samples/transplanted_6793bb56aeedc985824fbdb9_44.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793bb56aeedc985824fbdb9",
+                    "obj_file_location": "transplantation/outputs/extracted_objects/elephant_6793bb56aeedc985824fbdb9_21.pkl",
+                    "location": [
+                        50,
+                        50
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb9_45": {
+            "original_image_id": "6793bb56aeedc985824fbdb9",
+            "image_file_location": "transplantation/outputs/testing/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb9_45.jpg",
+            "sample_save_location": "transplantation/outputs/testing/transplanted_samples/transplanted_6793bb56aeedc985824fbdb9_45.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793bb56aeedc985824fbdb9",
+                    "obj_file_location": "transplantation/outputs/extracted_objects/elephant_6793bb56aeedc985824fbdb9_20.pkl",
+                    "location": [
+                        50,
+                        50
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb9_46": {
+            "original_image_id": "6793bb56aeedc985824fbdb9",
+            "image_file_location": "transplantation/outputs/testing/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb9_46.jpg",
+            "sample_save_location": "transplantation/outputs/testing/transplanted_samples/transplanted_6793bb56aeedc985824fbdb9_46.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793bb56aeedc985824fbdb9",
+                    "obj_file_location": "transplantation/outputs/extracted_objects/elephant_6793bb56aeedc985824fbdb9_22.pkl",
+                    "location": [
+                        50,
+                        50
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb9_47": {
+            "original_image_id": "6793bb56aeedc985824fbdb9",
+            "image_file_location": "transplantation/outputs/testing/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb9_47.jpg",
+            "sample_save_location": "transplantation/outputs/testing/transplanted_samples/transplanted_6793bb56aeedc985824fbdb9_47.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793bb56aeedc985824fbdb9",
+                    "obj_file_location": "transplantation/outputs/extracted_objects/elephant_6793bb56aeedc985824fbdb9_23.pkl",
+                    "location": [
+                        50,
+                        50
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb9_48": {
+            "original_image_id": "6793bb56aeedc985824fbdb9",
+            "image_file_location": "transplantation/outputs/testing/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb9_48.jpg",
+            "sample_save_location": "transplantation/outputs/testing/transplanted_samples/transplanted_6793bb56aeedc985824fbdb9_48.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793bb56aeedc985824fbdb3",
+                    "obj_file_location": "transplantation/outputs/extracted_objects/person_6793bb56aeedc985824fbdb3.pkl",
+                    "location": [
+                        50,
+                        50
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb9_49": {
+            "original_image_id": "6793bb56aeedc985824fbdb9",
+            "image_file_location": "transplantation/outputs/testing/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb9_49.jpg",
+            "sample_save_location": "transplantation/outputs/testing/transplanted_samples/transplanted_6793bb56aeedc985824fbdb9_49.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793a8a939aebf8086af4194",
+                    "obj_file_location": "transplantation/outputs\\extracted_objects\\person_6793a8a939aebf8086af4194.pkl",
+                    "location": [
+                        50,
+                        50
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb9_50": {
+            "original_image_id": "6793bb56aeedc985824fbdb9",
+            "image_file_location": "transplantation/outputs/testing/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb9_50.jpg",
+            "sample_save_location": "transplantation/outputs/testing/transplanted_samples/transplanted_6793bb56aeedc985824fbdb9_50.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793acde4a6e6ce8c83f72d1",
+                    "obj_file_location": "transplantation/outputs/extracted_objects/elephant_6793acde4a6e6ce8c83f72d1.pkl",
+                    "location": [
+                        50,
+                        50
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb9_51": {
+            "original_image_id": "6793bb56aeedc985824fbdb9",
+            "image_file_location": "transplantation/outputs/testing/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb9_51.jpg",
+            "sample_save_location": "transplantation/outputs/testing/transplanted_samples/transplanted_6793bb56aeedc985824fbdb9_51.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "679168327db12f83cc74f6e4",
+                    "obj_file_location": "transplantation/outputs\\extracted_objects\\elephant_679168327db12f83cc74f6e4.pkl",
+                    "location": [
+                        50,
+                        50
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb9_52": {
+            "original_image_id": "6793bb56aeedc985824fbdb9",
+            "image_file_location": "transplantation/outputs/testing/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb9_52.jpg",
+            "sample_save_location": "transplantation/outputs/testing/transplanted_samples/transplanted_6793bb56aeedc985824fbdb9_52.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793bb56aeedc985824fbdb3",
+                    "obj_file_location": "transplantation/outputs/extracted_objects/elephant_6793bb56aeedc985824fbdb3.pkl",
+                    "location": [
+                        50,
+                        50
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb9_53": {
+            "original_image_id": "6793bb56aeedc985824fbdb9",
+            "image_file_location": "transplantation/outputs/testing/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb9_53.jpg",
+            "sample_save_location": "transplantation/outputs/testing/transplanted_samples/transplanted_6793bb56aeedc985824fbdb9_53.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793a8a939aebf8086af419a",
+                    "obj_file_location": "transplantation/outputs\\extracted_objects\\elephant_6793a8a939aebf8086af419a_16.pkl",
+                    "location": [
+                        50,
+                        50
+                    ]
+                }
+            }
+        }
+    },
+    {
+        "6793bb56aeedc985824fbdb9_54": {
+            "original_image_id": "6793bb56aeedc985824fbdb9",
+            "image_file_location": "transplantation/outputs/testing/transplanted_images/transplanted_image_6793bb56aeedc985824fbdb9_54.jpg",
+            "sample_save_location": "transplantation/outputs/testing/transplanted_samples/transplanted_6793bb56aeedc985824fbdb9_54.json",
+            "transplantations": {
+                "1": {
+                    "object_id": "6793a8a939aebf8086af419a",
+                    "obj_file_location": "transplantation/outputs\\extracted_objects\\elephant_6793a8a939aebf8086af419a_17.pkl",
+                    "location": [
+                        50,
+                        50
+                    ]
+                }
+            }
+        }
     }
 ]

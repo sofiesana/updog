@@ -1,10 +1,10 @@
 import os
-from ImageWithTransplantedObjects import ImageWithTransplantedObjects
-from ImageObjectExtractor import ImageObjectExtractor
+from .ImageWithTransplantedObjects import ImageWithTransplantedObjects
+from .ImageObjectExtractor import ImageObjectExtractor
 import json
-from utils import get_id_at_index
+from .utils import get_id_at_index
 import fiftyone as fo
-from ExtractedObject import ExtractedObject
+from .ExtractedObject import ExtractedObject
 from PIL import Image
 
 class DatasetMaker():
@@ -88,7 +88,6 @@ class DatasetMaker():
                             print("Skipping transplant due to overlap")
                             break
 
-                    
                     if overlap_exceeded == True:
                         continue
 

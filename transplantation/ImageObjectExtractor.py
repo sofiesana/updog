@@ -2,7 +2,7 @@
 import numpy as np
 from PIL import Image
 from IPython.display import display
-from MaskExtractor import MaskExtractor
+from .MaskExtractor import MaskExtractor
 import os
 
 class ImageObjectExtractor():
