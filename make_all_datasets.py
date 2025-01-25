@@ -51,7 +51,7 @@ if __name__ == '__main__':
     new_dataset_name = 'transdata_' + str(ovelap_threshold) + '_' + classes_for_name+ 'n' +str(num_images)
     print(new_dataset_name)
     # run maker
-    dm = DatasetMaker(stride_size, save_folder, og_dataset_name, new_dataset_name, allow_overlap=False, overlap_threshold=ovelap_threshold, auto_add=False)
+    dm = DatasetMaker(stride_size, save_folder, og_dataset_name, new_dataset_name, allow_overlap=False, overlap_threshold=ovelap_threshold, auto_add=True)
     dm.run_dataset_maker()
     dm.print_no_of_images_created()
 
@@ -62,7 +62,7 @@ if __name__ == '__main__':
     new_dataset_name = 'transdata_' + str(ovelap_threshold) + '_' + classes_for_name+ 'n' +str(num_images)
     print(new_dataset_name)
     # run maker
-    dm = DatasetMaker(stride_size, save_folder, og_dataset_name, new_dataset_name, overlap_threshold=ovelap_threshold, allow_overlap=False, auto_add=False)
+    dm = DatasetMaker(stride_size, save_folder, og_dataset_name, new_dataset_name, overlap_threshold=ovelap_threshold, allow_overlap=False, auto_add=True)
     dm.run_dataset_maker()
     dm.print_no_of_images_created()
 
@@ -72,7 +72,7 @@ if __name__ == '__main__':
     new_dataset_name = 'transdata_' + str(ovelap_threshold) + '_' + classes_for_name+ 'n' +str(num_images)
     print(new_dataset_name)
     # run maker
-    dm = DatasetMaker(stride_size, save_folder, og_dataset_name, new_dataset_name, allow_overlap=True, overlap_threshold=ovelap_threshold, auto_add=False)
+    dm = DatasetMaker(stride_size, save_folder, og_dataset_name, new_dataset_name, allow_overlap=True, overlap_threshold=ovelap_threshold, auto_add=True)
     dm.run_dataset_maker()
     dm.print_no_of_images_created()
 
