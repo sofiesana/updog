@@ -12,16 +12,17 @@ import cv2
 
 class ImageWithTransplantedObjects():
   def __init__(self, sample, save_location, dataset_name, filename_appendix=None):
-    self.log_file = dataset_name + "_" + "transplantation_log.json"
+    self.log_file = os.path.join(save_location, dataset_name + "_" + "transplantation_log.json")
     original_image_path = sample.filepath
     self.og_image = Image.open(original_image_path)
     self.modified_image = self.og_image
     self.og_id = sample.id
     self.og_sample = sample
-    self.transplanted_image_id = f"{self.og_id}_{get_next_id('transplantation_ids.json')}"
+    self.transplanted_image_id = f"{self.og_id}"
     self.dataset_name = dataset_name
     self.transplantations = {}
     self.transplantation_counter = 0
+    self.abort = False
 
     if filename_appendix is not None:
       self.filename_appendix = '_' + filename_appendix
@@ -29,20 +30,35 @@ class ImageWithTransplantedObjects():
       self.filename_appendix = ''
 
     self.save_location = save_location
-    image_location_folder = self.make_folder('transplanted_images')
-    self.image_save_location = os.path.join(image_location_folder, f'transplanted_image_{self.transplanted_image_id}{self.filename_appendix}.jpg')
+    self.image_location_folder = self.make_folder('transplanted_images')
+    self.sample_location_folder = self.make_folder('transplanted_samples')
 
-    sample_location_folder = self.make_folder('transplanted_samples')
-    self.modified_sample_path = os.path.join(sample_location_folder, f"transplanted_{self.transplanted_image_id}{self.filename_appendix}.json")
-
-    self.modified_sample = fo.Sample(filepath=self.image_save_location)
-    self.setup_modified_sample()
+    self.modified_sample = None
 
     self.dataset = self.setup_dataset()
-    self.dataset.add_sample(self.modified_sample)
+
+    self.current_object = None
+
+    self.filename = None
+
+  def make_save_paths(self):
+    self.filename = f'{self.transplanted_image_id}_{self.current_object.obj_id}{self.filename_appendix}'
+    self.image_save_location = os.path.join(self.image_location_folder, f'transplanted_image_{self.filename}.jpg')
+    self.modified_sample_path = os.path.join(self.sample_location_folder, f"transplanted_{self.filename}.json")
+
+    # Check if the image save location already exists
+    if os.path.exists(self.image_save_location):
+        print(f"The image save location already exists. ({self.image_save_location})")
+        self.abort = True
+
+    # Check if the modified sample path already exists
+    if os.path.exists(self.modified_sample_path):
+        print(f"The modified sample path already exists. ({self.modified_sample_path})")
+        self.abort = True
+    
 
   def make_folder(self, folder_name):
-    location_folder = os.path.join(self.save_location, self.dataset_name, folder_name)
+    location_folder = os.path.join(self.save_location, folder_name)
     if not os.path.exists(location_folder):
       os.makedirs(location_folder)
     return location_folder
@@ -63,70 +79,33 @@ class ImageWithTransplantedObjects():
     self.modified_sample.metadata = self.og_sample.metadata
 
   def add_transplanted_object(self, obj, location):
+    self.current_object = obj
+    self.make_save_paths()
+    if self.abort:
+      print("Aborting transplantation.")
+      return
+    self.modified_sample = fo.Sample(filepath=self.image_save_location)
+    self.setup_modified_sample()
+    self.dataset.add_sample(self.modified_sample)
     self.transplantation_counter += 1
     self.transplantations[self.transplantation_counter] = {"object_id": obj.id, "obj_file_location": obj.file_location, "location": location}
     transplanter = ObjectTransplanter()
     transplanter.transplant_object(self.modified_image, obj, location)
     self.modified_image = transplanter.get_transplanted_image()
-    self.update_modified_sample_with_transplant(obj, location)
-
-  def transplant_with_sliding_window(self, obj, stride, allow_overlap=False):
-    generated_images = []
-    image_width, image_height = self.modified_image.size
-    print("Image size: ", image_height, image_width)
-    obj_width, obj_height = obj.mask.shape[1], obj.mask.shape[0]
-
-    for y in range(0, image_height - obj_height + 1, stride):
-      for x in range (0, image_width - obj_width + 1, stride):
-          print(f"Placing object at ({x}, {y})")
-
-          if not allow_overlap:
-            overlap_exceeded = False
-            for detection in self.og_sample["ground_truth"].detections:
-              other_mask = detection.mask
-              other_bbox = detection.bounding_box
-
-              if obj.check_for_overlap(image_width, image_height, other_mask, other_bbox, x, y):
-                overlap_exceeded = True
-                print("Skipping transplant due to overlap")
-                break
-
-            
-            if overlap_exceeded == True:
-              continue
-
-          # for saving the images, both as a png and as a pkl in unique folders
-          unique_save_location = os.path.join(
-              'transplantation/outputs/transplants_with_stride',
-              f'{self.transplanted_image_id}_x{x}_y{y}'
-          )
-
-          transplanted_images_folder = os.path.join(unique_save_location, 'transplanted_images')
-          transplanted_samples_folder = os.path.join(unique_save_location, 'transplanted_samples')
-          os.makedirs(transplanted_images_folder, exist_ok=True)
-          os.makedirs(transplanted_samples_folder, exist_ok=True)
-
-          new_transplanted_image = ImageWithTransplantedObjects(
-              sample=self.og_sample, #new_sample,
-              save_location=unique_save_location,
-              dataset_name=self.dataset_name
-          )
-
-          new_transplanted_image.add_transplanted_object(obj, (x,y))
-          new_transplanted_image.save_transplanted_image()
-          generated_images.append(new_transplanted_image)
-
-    return generated_images
-  
+    self.update_modified_sample_with_transplant(obj, location)  
 
   def save_transplanted_image(self):
+    if self.abort:
+      print("transplantated image not saved as transplantation was aborted")
+      return
     self.log_modified_image()
     self.save_image()
 
   def log_modified_image(self):
     entry = {
-       f"{self.transplanted_image_id}": {
+       f"{self.filename}": {
         "original_image_id": self.og_id,
+        "transplanted_object_id": self.current_object.id,
         "image_file_location": self.image_save_location,
         "sample_save_location": self.modified_sample_path,
         "transplantations": self.transplantations
