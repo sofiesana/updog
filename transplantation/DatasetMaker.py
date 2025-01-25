@@ -7,10 +7,12 @@ import fiftyone as fo
 from .ExtractedObject import ExtractedObject
 from PIL import Image
 import shutil
+from tqdm import tqdm
 
 class DatasetMaker():
-    def __init__(self, stride_size, save_folder, og_dataset_name, new_dataset_name, allow_overlap=True, overlap_threshold=100):
+    def __init__(self, stride_size, save_folder, og_dataset_name, new_dataset_name, allow_overlap=True, overlap_threshold=100, auto_add = False):
         self.stride_size = stride_size
+        self.auto_add = auto_add
         self.og_dataset_name = og_dataset_name
         self.og_dataset = fo.load_dataset(og_dataset_name)
         self.new_dataset_name = new_dataset_name
@@ -23,52 +25,64 @@ class DatasetMaker():
         self.check_dataset_availability()
         self.dataset.persistent = True
         self.overlap_threshold = overlap_threshold
-        
     
     def check_dataset_availability(self):
         print(fo.list_datasets())
         if self.new_dataset_name in fo.list_datasets():
-            choice = input(f"Dataset {self.new_dataset_name} already exists. Do you want to delete it or add to it? (delete/add): ").strip().lower()
-            if choice == 'delete':
-                print(f"Deleting dataset {self.new_dataset_name}. Creating a new dataset for {self.new_dataset_name}.")
-                fo.delete_dataset(self.new_dataset_name)
-                self.dataset = fo.Dataset(name=self.new_dataset_name)
-                if os.path.exists(self.dataset_save_location):
-                    shutil.rmtree(self.dataset_save_location)
-                    print(f"Folder '{self.dataset_save_location}' has been deleted.")
-            elif choice == 'add':
+            if not self.auto_add:
+                choice = input(f"Dataset {self.new_dataset_name} already exists. Do you want to delete it or add to it? (delete/add): ").strip().lower()
+                if choice == 'delete':
+                    print(f"Deleting dataset {self.new_dataset_name}. Creating a new dataset for {self.new_dataset_name}.")
+                    fo.delete_dataset(self.new_dataset_name)
+                    self.dataset = fo.Dataset(name=self.new_dataset_name)
+                    if os.path.exists(self.dataset_save_location):
+                        shutil.rmtree(self.dataset_save_location)
+                        print(f"Folder '{self.dataset_save_location}' has been deleted.")
+                elif choice == 'add':
+                    print(f"Adding to the existing dataset {self.new_dataset_name}.")
+                    self.dataset = fo.load_dataset(self.new_dataset_name)
+                else:
+                    print("Invalid choice. Please enter 'delete' or 'add'.")
+            else: 
                 print(f"Adding to the existing dataset {self.new_dataset_name}.")
                 self.dataset = fo.load_dataset(self.new_dataset_name)
-            else:
-                print("Invalid choice. Please enter 'delete' or 'add'.")
         else:
             print(f"Dataset {self.new_dataset_name} does not exist. Creating a new dataset")
             self.dataset = fo.Dataset(name=self.new_dataset_name)
 
-    def extract_all_objects(self):
-        print("Extracting Objects")
-        for sample in self.og_dataset:
-            obj_extract = ImageObjectExtractor(sample, save_location=self.save_location, filter=True, filter_type="min", og_dataset_name=self.og_dataset_name)
-            obj_extract.extract_objects()
+    def extract_dataset(self):
+        # Load your dataset
+        dataset = fo.load_dataset(self.new_dataset_name)
+        extract_dir = os.path.join(self.dataset_save_location, "extracted_dataset")
+        # Export the dataset to a directory in COCO format
+        dataset.export(
+            export_dir=extract_dir,
+            dataset_type=fo.types.COCODetectionDataset,
+            label_field="ground_truth"
+        )
+
+        print(f"Dataset exported to: {self.dataset_save_location}")
     
     def print_no_of_available_objects(self):
         with open(os.path.join(self.save_folder, f'{self.og_dataset_name}_extracted_objects_log.json')) as f:
             objects_log = json.load(f)
         print(f'{len(objects_log)} objects are extracted and ready to transplant')
 
-    def run_dataset_maker(self, skip_extraction = False):
-        if skip_extraction == False:
-            self.extract_all_objects()
-
+    def run_dataset_maker(self):
+        path_to_objects = os.path.join(self.save_folder, f'{self.og_dataset_name}_extracted_objects_log.json')
+        if not os.path.exists(path_to_objects):
+            print("ERROR: No objects available to transplant. Please run the DatasetObjectExtractor first.")
+            return
+        
         with open(os.path.join(self.save_folder, f'{self.og_dataset_name}_extracted_objects_log.json')) as f:
             objects_log = json.load(f)
 
         self.print_no_of_available_objects()
 
-        for sample in self.og_dataset:
+        for sample in tqdm(self.og_dataset, desc="Processing samples"):
             self.current_og_sample = sample
             print(f"TRANSPLANTING INTO IMAGE {sample.id}")
-            for i in range(len(objects_log)):
+            for i in tqdm(range(len(objects_log)), desc="Transplanting objects"):
                 id = get_id_at_index(objects_log, i)
                 og_image_id = objects_log[i][id]['og_image_id']
 
@@ -87,7 +101,7 @@ class DatasetMaker():
 
         for y in range(0, image_height - obj_height + 1, self.stride_size):
             for x in range (0, image_width - obj_width + 1, self.stride_size):
-                print(f"Placing object at ({x}, {y})")
+                # print(f"Placing object at ({x}, {y})")
 
                 if not self.allow_overlap:
                     overlap_exceeded = False
@@ -97,7 +111,7 @@ class DatasetMaker():
 
                         if obj.check_for_overlap(image_width, image_height, other_mask, other_bbox, x, y, threshold=self.overlap_threshold):
                             overlap_exceeded = True
-                            print("Skipping transplant due to overlap")
+                            # print("Skipping transplant due to overlap")
                             break
 
                     if overlap_exceeded == True:
