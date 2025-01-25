@@ -9,7 +9,7 @@ from PIL import Image
 import shutil
 
 class DatasetMaker():
-    def __init__(self, stride_size, save_folder, og_dataset_name, new_dataset_name, allow_overlap=False):
+    def __init__(self, stride_size, save_folder, og_dataset_name, new_dataset_name, allow_overlap=True, overlap_threshold=100):
         self.stride_size = stride_size
         self.og_dataset_name = og_dataset_name
         self.og_dataset = fo.load_dataset(og_dataset_name)
@@ -22,6 +22,7 @@ class DatasetMaker():
         self.dataset_save_location = os.path.join(self.save_folder, new_dataset_name)
         self.check_dataset_availability()
         self.dataset.persistent = True
+        self.overlap_threshold = overlap_threshold
         
     
     def check_dataset_availability(self):
@@ -49,12 +50,20 @@ class DatasetMaker():
         for sample in self.og_dataset:
             obj_extract = ImageObjectExtractor(sample, save_location=self.save_location, filter=True, filter_type="min", og_dataset_name=self.og_dataset_name)
             obj_extract.extract_objects()
+    
+    def print_no_of_available_objects(self):
+        with open(os.path.join(self.save_folder, f'{self.og_dataset_name}_extracted_objects_log.json')) as f:
+            objects_log = json.load(f)
+        print(f'{len(objects_log)} objects are extracted and ready to transplant')
 
-    def run_dataset_maker(self):
-        self.extract_all_objects()
+    def run_dataset_maker(self, skip_extraction = False):
+        if skip_extraction == False:
+            self.extract_all_objects()
 
         with open(os.path.join(self.save_folder, f'{self.og_dataset_name}_extracted_objects_log.json')) as f:
             objects_log = json.load(f)
+
+        self.print_no_of_available_objects()
 
         for sample in self.og_dataset:
             self.current_og_sample = sample
@@ -86,24 +95,13 @@ class DatasetMaker():
                         other_mask = detection.mask
                         other_bbox = detection.bounding_box
 
-                        if obj.check_for_overlap(image_width, image_height, other_mask, other_bbox, x, y):
+                        if obj.check_for_overlap(image_width, image_height, other_mask, other_bbox, x, y, threshold=self.overlap_threshold):
                             overlap_exceeded = True
                             print("Skipping transplant due to overlap")
                             break
 
                     if overlap_exceeded == True:
                         continue
-
-                # # for saving the images, both as a png and as a pkl in unique folders
-                # unique_save_location = os.path.join(
-                #     'transplantation/outputs/transplants_with_stride',
-                #     f'{self.transplanted_image_id}_x{x}_y{y}'
-                # )
-
-                # transplanted_images_folder = os.path.join(unique_save_location, 'transplanted_images')
-                # transplanted_samples_folder = os.path.join(unique_save_location, 'transplanted_samples')
-                # os.makedirs(transplanted_images_folder, exist_ok=True)
-                # os.makedirs(transplanted_samples_folder, exist_ok=True)
 
                 new_transplanted_image = ImageWithTransplantedObjects(
                     sample=self.current_og_sample, #new_sample,
