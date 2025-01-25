@@ -11,13 +11,9 @@ import fiftyone as fo
 import copy
 
 class ImageWithTransplantedObjects():
-  def __init__(self, sample, save_location, dataset_name):
+  def __init__(self, sample, save_location, dataset_name, filename_appendix=None):
     self.log_file = dataset_name + "_" + "transplantation_log.json"
     original_image_path = sample.filepath
-    if save_location is None:
-      self.save_location = ''
-    else:
-      self.save_location = os.path.join(save_location, dataset_name)
     self.og_image = Image.open(original_image_path)
     self.modified_image = self.og_image
     self.og_id = sample.id
@@ -27,21 +23,29 @@ class ImageWithTransplantedObjects():
     self.transplantations = {}
     self.transplantation_counter = 0
 
-    location_folder = os.path.join(self.save_location, f'transplanted_images')
-    if not os.path.exists(location_folder):
-      os.makedirs(location_folder)
-    self.image_save_location = os.path.join(location_folder, f'transplanted_image_{self.transplanted_image_id}.jpg')
+    if filename_appendix is not None:
+      self.filename_appendix = '_' + filename_appendix
+    else:
+      self.filename_appendix = ''
 
-    location_folder = os.path.join(self.save_location, 'transplanted_samples', )
-    if not os.path.exists(location_folder):
-      os.makedirs(location_folder)
-    self.modified_sample_path = os.path.join(location_folder, f"transplanted_{self.transplanted_image_id}.json")
+    self.save_location = save_location
+    image_location_folder = self.make_folder('transplanted_images')
+    self.image_save_location = os.path.join(image_location_folder, f'transplanted_image_{self.transplanted_image_id}{self.filename_appendix}.jpg')
+
+    sample_location_folder = self.make_folder('transplanted_samples')
+    self.modified_sample_path = os.path.join(sample_location_folder, f"transplanted_{self.transplanted_image_id}{self.filename_appendix}.json")
 
     self.modified_sample = fo.Sample(filepath=self.image_save_location)
     self.setup_modified_sample()
 
     self.dataset = self.setup_dataset()
     self.dataset.add_sample(self.modified_sample)
+
+  def make_folder(self, folder_name):
+    location_folder = os.path.join(self.save_location, self.dataset_name, folder_name)
+    if not os.path.exists(location_folder):
+      os.makedirs(location_folder)
+    return location_folder
 
   def setup_dataset(self):
     if self.dataset_name not in fo.list_datasets():
@@ -66,7 +70,7 @@ class ImageWithTransplantedObjects():
     self.modified_image = transplanter.get_transplanted_image()
     self.update_modified_sample_with_transplant(obj, location)
 
-  def transplant_with_sliding_window(self, obj, stride):
+  def transplant_with_sliding_window(self, obj, stride, allow_overlap=False):
     generated_images = []
     image_width, image_height = self.modified_image.size
     print("Image size: ", image_height, image_width)
@@ -76,20 +80,20 @@ class ImageWithTransplantedObjects():
       for x in range (0, image_width - obj_width + 1, stride):
           print(f"Placing object at ({x}, {y})")
 
-          overlap_exceeded = False
-          for detection in self.og_sample["ground_truth"].detections:
-            other_mask = detection.mask
-            other_bbox = detection.bounding_box
+          if not allow_overlap:
+            overlap_exceeded = False
+            for detection in self.og_sample["ground_truth"].detections:
+              other_mask = detection.mask
+              other_bbox = detection.bounding_box
 
-            if obj.check_for_overlap(image_width, image_height, other_mask, other_bbox, x, y):
-              overlap_exceeded = True
-              print("Skipping transplant due to overlap")
-              break
+              if obj.check_for_overlap(image_width, image_height, other_mask, other_bbox, x, y):
+                overlap_exceeded = True
+                print("Skipping transplant due to overlap")
+                break
 
-          print()
-          
-          if overlap_exceeded == True:
-            continue
+            
+            if overlap_exceeded == True:
+              continue
 
           # for saving the images, both as a png and as a pkl in unique folders
           unique_save_location = os.path.join(
@@ -137,8 +141,6 @@ class ImageWithTransplantedObjects():
     self.modified_sample["original_image_id"] = self.og_id
     self.modified_sample["origina_image_path"] = self.og_sample.filepath
     self.modified_sample.save()
-    # print len of dataset
-    print(len(self.dataset))
 
     json_sample = self.modified_sample.to_dict(include_private=True)
     with open(self.modified_sample_path, 'w') as f:
