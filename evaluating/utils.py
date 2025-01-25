@@ -1,4 +1,7 @@
 import numpy as np
+import logging
+import matplotlib.pyplot as plt
+from PIL import Image
 
 def get_mean_conf(results):
   confidences = results.confs
@@ -86,4 +89,16 @@ def get_bbox_matching_score(bboxs_list1, bboxs_list2, classes_list1, classes_lis
   mean_iou = np.mean(ious)
 
   return mean_iou
+
+def stfu():
+    logger = logging.getLogger("fiftyone.utils.eval.detection")
+    logger.setLevel(logging.WARNING)
+
+def show_data_image(sample):
+    original_image_path = sample.filepath
+    img = Image.open(original_image_path)
+
+    plt.imshow(img)
+    plt.axis('off')  # Hide axes
+    plt.show(block=True)  # This will block execution until the window is closed
 

@@ -1,5 +1,5 @@
 from evaluating import evaluation
-from DatasetMaker import DatasetMaker
+from transplantation.DatasetMaker import DatasetMaker
 
 
 import fiftyone as fo
@@ -21,13 +21,15 @@ def view_dataset():
 def evaluate_datasets():
     ds_og = fo.load_dataset('coco-2017-validation-2')
     ds_trans = fo.load_dataset('test1')
+    model_name = 'rtdetr-l-coco-torch'
 
-    og_metrics, trans_metrics, avg_matching_score = evaluation.evaluate_datasets(ds_og, ds_trans, 'rtdetr-l-coco-torch')
-    print("OG Metrics: ", og_metrics)
-    print("Transplant Metrics: ", trans_metrics)
-    print("Average BBox Matching Score: ", avg_matching_score)
+    og_conf, og_f1, trans_conf, trans_f1, avg_matching_score = evaluation.evaluate_datasets(ds_og, ds_trans, model_name)
+    
+    print("OG Conf: ", round(og_conf, 2), " - Transplanted Conf: ", round(trans_conf, 2))
+    print("OG F1: ", round(og_f1, 2), " - Transplanted F1: ", round(trans_f1, 2))
+    print("Average BBox Matching Score: ", round(avg_matching_score, 2))
 
 if __name__ == '__main__':
     main()
-    view_dataset()
     evaluate_datasets()
+    view_dataset()

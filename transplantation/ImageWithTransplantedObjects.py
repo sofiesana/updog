@@ -1,10 +1,9 @@
 # imports
 import os
 from PIL import Image
-from utils import display
-from ObjectTransplanter import ObjectTransplanter
+from .utils import display, log_entry, get_next_id
+from .ObjectTransplanter import ObjectTransplanter
 import numpy as np
-from utils import log_entry, get_next_id
 import pickle as pkl
 import json
 import fiftyone as fo

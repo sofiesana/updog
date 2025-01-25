@@ -1,8 +1,8 @@
 # add imports
 import numpy as np
 from PIL import Image
-from utils import display
-from ExtractedObject import ExtractedObject
+from .utils import display
+from .ExtractedObject import ExtractedObject
 
 class MaskExtractor():
   def __init__(self, box, mask, pixels, id, obj_id, class_label, save_location, object_log_file, og_dataset_name, filter=False, min_filter_ratio=0.05, max_filter_ratio=0.8, filter_type="both"):
