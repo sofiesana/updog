@@ -45,7 +45,7 @@ class ExtractedObject():
       
       #check if file_location already exists
       if os.path.exists(self.file_location):
-        print(f"Setup failed: Object with ID {obj_id} already exists at {self.file_location}")
+        print(f"Setup failed: Object already extracted")
         self.is_setup = False
       else:
         # print(f"Object setup successful for ID: {obj_id}")
@@ -184,11 +184,6 @@ class ExtractedObject():
 
     # calculate the percentage of overlap over the other object
     overlap_percentage = np.sum(overlap) / np.sum(blank_image_other) * 100
-
-    # print(f"Overlap percentage: {overlap_percentage}")
-
-    # self.plot_masks(blank_image_obj, blank_image_other) # uncomment to plot the masks for debugging
-
 
     # if the overlap is greater than the threshold, return True
     if overlap_percentage > threshold:
