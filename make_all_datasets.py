@@ -5,6 +5,7 @@ import fiftyone as fo
 import os
 import shutil
 from transplantation.DatasetObjectExtractor import DatasetObjectExtractor
+from transplantation.utils import import_dataset, view_dataset
 
 if __name__ == '__main__':
     
@@ -42,20 +43,39 @@ if __name__ == '__main__':
     extractor.print_no_of_available_objects()
 
     ### STEP 3: GENERATE THE TRANSPLANTED IMAGES FOR THE GIVEN PARAMETERS
-
-    # define parameters:
     stride_size = 100
+    
+    ## Dataset 1 (20% overlap allowed): 
     ovelap_threshold = 20
-
     # generated dataset name:
     new_dataset_name = 'transdata_' + str(ovelap_threshold) + '_' + classes_for_name+ 'n' +str(num_images)
     print(new_dataset_name)
     # run maker
-    dm = DatasetMaker(stride_size, save_folder, og_dataset_name, new_dataset_name, allow_overlap=False, overlap_threshold=ovelap_threshold, auto_add=True, )
-    dm.run_dataset_maker(skip_extraction=True)
-    dm.extract_dataset()
+    dm = DatasetMaker(stride_size, save_folder, og_dataset_name, new_dataset_name, allow_overlap=False, overlap_threshold=ovelap_threshold, auto_add=False)
+    dm.run_dataset_maker()
+    dm.print_no_of_images_created()
 
-    ### STEP 4: EVALUATE MODEL PERFORMANCE ON TRANSPLANTED DATASET
-    # matching_threshold = 0.99
-    # evaluate_datasets(og_dataset_name, new_dataset_name, matching_threshold)
-    # view_dataset()
+    
+    ## Dataset 2 (no overlap allowed): 
+    # generated dataset name:
+    ovelap_threshold = 0
+    new_dataset_name = 'transdata_' + str(ovelap_threshold) + '_' + classes_for_name+ 'n' +str(num_images)
+    print(new_dataset_name)
+    # run maker
+    dm = DatasetMaker(stride_size, save_folder, og_dataset_name, new_dataset_name, overlap_threshold=ovelap_threshold, allow_overlap=False, auto_add=False)
+    dm.run_dataset_maker()
+    dm.print_no_of_images_created()
+
+    ## Dataset 3 (all overlap allowed): 
+    ovelap_threshold = 100
+    # generated dataset name:
+    new_dataset_name = 'transdata_' + str(ovelap_threshold) + '_' + classes_for_name+ 'n' +str(num_images)
+    print(new_dataset_name)
+    # run maker
+    dm = DatasetMaker(stride_size, save_folder, og_dataset_name, new_dataset_name, allow_overlap=True, overlap_threshold=ovelap_threshold, auto_add=False)
+    dm.run_dataset_maker()
+    dm.print_no_of_images_created()
+
+    
+
+    
