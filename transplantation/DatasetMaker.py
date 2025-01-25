@@ -49,19 +49,6 @@ class DatasetMaker():
         else:
             print(f"Dataset {self.new_dataset_name} does not exist. Creating a new dataset")
             self.dataset = fo.Dataset(name=self.new_dataset_name)
-
-    def extract_dataset(self, extract_path):
-        # Load your dataset
-        dataset = fo.load_dataset(self.new_dataset_name)
-        extract_dir = extract_path
-        # Export the dataset to a directory in COCO format
-        dataset_type = COCODetectionDataset
-        dataset.export(
-            export_dir=extract_dir,
-            dataset_type=dataset_type
-        )
-
-        print(f"Dataset exported to: {self.dataset_save_location}")
     
     def print_no_of_available_objects(self):
         with open(os.path.join(self.save_folder, f'{self.og_dataset_name}_extracted_objects_log.json')) as f:
