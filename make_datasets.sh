@@ -16,6 +16,5 @@ module load Python/3.8.16-GCCcore-11.2.0
 # activate virtual environment
 source $HOME/venvs/updog/bin/activate
 
-
 # Run training
 python3 make_all_datasets.py
