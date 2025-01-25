@@ -5,15 +5,21 @@ from utils import display
 from ExtractedObject import ExtractedObject
 
 class MaskExtractor():
-  def __init__(self, box, mask, pixels, id, class_label, save_location, object_log_file):
+  def __init__(self, box, mask, pixels, id, obj_id, class_label, save_location, object_log_file, og_dataset_name, filter=False, min_filter_ratio=0.05, max_filter_ratio=0.8, filter_type="both"):
     self.object_log_file = object_log_file
     self.box = box
     self.mask = mask
     self.pixels = pixels
     self.masked_pixels = np.copy(pixels)
     self.id = id
+    self.obj_id = obj_id
     self.class_label = class_label
     self.save_location = save_location
+    self.filter = filter
+    self.min_filter_ratio = min_filter_ratio
+    self.max_filter_ratio = max_filter_ratio
+    self.filter_type = filter_type
+    self.og_dataset_name = og_dataset_name
 
     # Getting all the dimensions
     self.top_left_x, self.top_left_y, self.width, self.height = box
@@ -69,6 +75,8 @@ class MaskExtractor():
         self.masked_pixels[y, x] = (0, 0, 0)
 
   def run_extractor(self, display=False):
+    if self.filter and self.filter_extracted_object_based_on_ratio():
+      return
     for y in range(self.pixels.shape[0]):
       for x in range(self.pixels.shape[1]):
         self.filter_pixels(x, y)
@@ -89,7 +97,18 @@ class MaskExtractor():
 
   def save_extracted_object(self):
     obj = ExtractedObject(log_file_path=self.object_log_file)
-    obj.setup(self.mask, self.mask_with_pixels, self.id, self.class_label, self.box, self.box_in_pixels, self.save_location)
-    obj.save_object()
-    obj.save_mask_with_pixels_as_jpg()
-    obj.save_mask()
+    obj.setup(self.pixels, self.mask, self.mask_with_pixels, self.id, self.obj_id, self.class_label, self.box, self.box_in_pixels, self.save_location)
+    if obj.is_setup:
+      obj.save_object()
+      obj.save_mask_with_pixels_as_jpg()
+      obj.save_mask()
+  
+  def filter_extracted_object_based_on_ratio(self):
+    obj_area = self.mask.shape[0] * self.mask.shape[1]
+    img_area = np.prod(self.pixels.shape)
+    if (self.filter_type == "both" or self.filter_type == "min") and obj_area < (img_area * self.min_filter_ratio):
+      print("Object too small, skipping id:", self.obj_id)
+      return True
+    if (self.filter_type == "both" or self.filter_type == "max") and obj_area > (img_area * self.max_filter_ratio):
+      print("Object too big, skipping id:", self.obj_id)
+      return True

@@ -3,6 +3,7 @@ from PIL import Image
 import matplotlib.pyplot as plt
 import json
 import os
+import fiftyone as fo
 
 def get_next_id(tracker_file):
     if os.path.exists(tracker_file):
@@ -64,3 +65,6 @@ def load_sample_from_json(filepath):
     with open(filepath, 'r') as f:
         sample_dict = json.load(f)
     return fo.Sample.from_dict(sample_dict)
+
+def get_id_at_index(data, index):
+  return list(data[index].keys())[0]
