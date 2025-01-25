@@ -61,7 +61,8 @@ class ExtractedObject():
       f"{self.obj_id}": {
         "class_label": self.class_label,
         "og_image_id": self.id,
-        "file_location": self.file_location
+        "file_location": self.file_location,
+        "shape": self.mask.shape
       }
     }
 
@@ -156,6 +157,15 @@ class ExtractedObject():
                          int(other_bbox[2] * image_width), int(other_bbox[3] * image_height)]
     
     # print("Obj pixels: ", obj_bbox_pixels, "Other pixels: ", other_bbox_pixels)
+
+    # Define a helper function to check overlap between two bounding boxes
+    def boxes_overlap(box1, box2):
+        return not (box1[2] < box2[0] or box1[0] > box2[2] or box1[3] < box2[1] or box1[1] > box2[3])
+
+    # Check if the bounding boxes overlap
+    if not boxes_overlap(obj_bbox_pixels, other_bbox_pixels):
+        # If the bounding boxes do not overlap, return False without further processing
+        return False
 
     # create a blank image with the same size as the image
     blank_image_obj = np.zeros((image_height, image_width))
