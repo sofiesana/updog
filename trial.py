@@ -23,11 +23,14 @@ def evaluate_datasets():
     ds_trans = fo.load_dataset('test1')
     model_name = 'rtdetr-l-coco-torch'
 
-    og_conf, og_f1, trans_conf, trans_f1, avg_matching_score = evaluation.evaluate_datasets(ds_og, ds_trans, model_name, max_images=None, show_images=False)
+    og_conf, og_f1, trans_conf, trans_f1, avg_matching_score, trans_obj_classification_acc, trans_obj_iou = evaluation.evaluate_datasets(ds_og, ds_trans, model_name, show_images=False)
     
     print("OG Conf: ", round(og_conf, 2), " - Transplanted Conf: ", round(trans_conf, 2))
     print("OG F1: ", round(og_f1, 2), " - Transplanted F1: ", round(trans_f1, 2))
-    print("Average BBox Matching Score: ", round(avg_matching_score, 2))
+    print("Mean BBox Matching Score: ", round(avg_matching_score, 2))
+    print("Transplanted Object Classification Accuracy: ", trans_obj_classification_acc)
+    print("Mean Transplanted Object IoU: ", trans_obj_iou)
+
 
 if __name__ == '__main__':
     main()
