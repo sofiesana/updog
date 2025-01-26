@@ -27,8 +27,11 @@ if __name__ == '__main__':
     # ds_og = 'coco-2017-validation-25'
     # ds_trans = 'transdata_0_n25'
 
+    print(fo.list_datasets())
+
     ds_og = 'coco-2017-validation-2'
-    ds_trans = 'transdata_20_n2'
+    # ds_trans = 'transdata_20_n2'
+    ds_trans = 'test1'
 
     models_to_test = ['rtdetr-l-coco-torch']
 

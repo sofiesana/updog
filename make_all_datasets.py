@@ -13,7 +13,7 @@ import time
 
 if __name__ == '__main__':
     ### STEP 0: CLEARING PREVIOUS DOWNLOADED IMAGES (if you haven't run this before)
-    # delete_previous_coco_load()
+    # delete_previous_coco_load() # I comment this out cuz I got the whole dataset already
 
     start_time = time.time()
     ### STEP 1: DOWNLOADING THE IMAGES FROM FIFTYONE AND MAKING THE DATASET (only needs to be done once)
@@ -41,7 +41,7 @@ if __name__ == '__main__':
     else:
         dataset = fo.load_dataset(og_dataset_name)
 
-    # view_dataset(dataset)
+    view_dataset(dataset)
 
     ### STEP 2: EXTRACT THE OBJECTS FROM THE DATASET
 

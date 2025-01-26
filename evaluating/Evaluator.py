@@ -99,6 +99,8 @@ class Evaluator():
         object_label = results.ytrue[matching_id_index]
         object_pred_class = results.ypred[matching_id_index]
         object_iou = results.ious[matching_id_index]
+        # print("Matched Idx: ", matching_id_index, "IoUs: ", results.ious)
+        # print("Object IoU: ", object_iou)
 
         if object_label == object_pred_class:
             correctly_classified = 1
@@ -107,7 +109,7 @@ class Evaluator():
 
         if object_iou[0] is None:
             print(object_iou[0])
-        object_iou[0] = np.nan
+            object_iou[0] = np.nan
 
         return correctly_classified, object_iou[0]
 
@@ -136,7 +138,7 @@ class Evaluator():
             self.og_metrics["conf"].append(mean_conf_og)
             self.og_metrics["f1"].append(f1_score_og)
 
-            results = predictions_og.evaluate_detections("predictions", gt_field="ground_truth", eval_key="eval")
+            # results = predictions_og.evaluate_detections("predictions", gt_field="ground_truth", eval_key="eval")
 
             trans_metrics = []
             match_found = False
