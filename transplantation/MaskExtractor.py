@@ -107,6 +107,7 @@ class MaskExtractor():
     obj_area = self.mask.shape[0] * self.mask.shape[1]
     img_area = np.prod(self.pixels.shape)
     if (self.filter_type == "both" or self.filter_type == "min") and obj_area < (img_area * self.min_filter_ratio):
+      # print(obj_area)
       print("Object too small, skipping id:", self.obj_id)
       return True
     if (self.filter_type == "both" or self.filter_type == "max") and obj_area > (img_area * self.max_filter_ratio):

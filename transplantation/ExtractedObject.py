@@ -45,7 +45,7 @@ class ExtractedObject():
       
       #check if file_location already exists
       if os.path.exists(self.file_location):
-        print(f"Setup failed: Object already extracted")
+        print(f"Setup failed: Object {obj_id} already extracted")
         self.is_setup = False
       else:
         # print(f"Object setup successful for ID: {obj_id}")
@@ -69,6 +69,7 @@ class ExtractedObject():
     log_entry(self.log_file_path, entry, id=self.obj_id)
 
   def save_object(self):
+    print(f"OBJECT {self.obj_id} SAVED")
     with open(self.file_location, 'wb') as f:
       pkl.dump(self, f)
     self.log_object()
@@ -88,7 +89,7 @@ class ExtractedObject():
     location_folder = os.path.join(self.save_location, f'pixel_masks')
     if not os.path.exists(location_folder):
       os.makedirs(location_folder)
-    location = os.path.join(location_folder, f'pixel_mask_{self.class_label}_{self.id}.jpg')
+    location = os.path.join(location_folder, f'pixel_mask_{self.class_label}_{self.obj_id}.jpg')
     image = Image.fromarray(self.mask_with_pixels)
     image.save(location)
 
@@ -96,7 +97,7 @@ class ExtractedObject():
     location_folder = os.path.join(self.save_location, f'masks')
     if not os.path.exists(location_folder):
       os.makedirs(location_folder)
-    location = os.path.join(location_folder, f'mask_{self.class_label}_{self.id}.jpg')
+    location = os.path.join(location_folder, f'mask_{self.class_label}_{self.obj_id}.jpg')
     image = Image.fromarray(self.mask)
     image.save(location)
 

@@ -13,6 +13,7 @@ class DatasetObjectExtractor():
     def extract_all_objects(self):
         print("Extracting Objects")
         for sample in self.dataset:
+            print(sample.id)
             obj_extract = ImageObjectExtractor(sample, save_location=self.save_location, filter=True, filter_type="min", og_dataset_name=self.og_dataset_name)
             obj_extract.extract_objects()
     
