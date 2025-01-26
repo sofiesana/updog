@@ -41,7 +41,7 @@ if __name__ == '__main__':
     else:
         dataset = fo.load_dataset(og_dataset_name)
 
-    # view_dataset(dataset)
+    # # view_dataset(dataset)
 
     ### STEP 2: EXTRACT THE OBJECTS FROM THE DATASET
 
@@ -67,6 +67,17 @@ if __name__ == '__main__':
     
     # # ## Dataset 2 (no overlap allowed): 
     # generated dataset name:
+    new_dataset_name = 'transdata_' + str(ovelap_threshold) + '_' + classes_for_name+ 'n' +str(num_images)
+    fo.delete_dataset(new_dataset_name)
+    print(new_dataset_name)
+    # run maker
+    dm = DatasetMaker(stride_size, save_folder, og_dataset_name, new_dataset_name, allow_overlap=False, overlap_threshold=ovelap_threshold, auto_add=False)
+    dm.run_dataset_maker()
+    dm.print_no_of_images_created()
+
+    
+    # ## Dataset 2 (no overlap allowed): 
+    # # generated dataset name:
     # ovelap_threshold = 0
     # new_dataset_name = 'transdata_' + str(ovelap_threshold) + '_' + classes_for_name+ 'n' +str(num_images)
     # print(new_dataset_name)
