@@ -5,6 +5,7 @@ import json
 import os
 import fiftyone as fo
 from fiftyone.types.dataset_types import COCODetectionDataset
+import shutil
 
 def import_dataset(import_dir):
   # Import the dataset from the directory
@@ -82,3 +83,20 @@ def get_id_at_index(data, index):
 def view_dataset(ds):
     session = fo.launch_app(ds)
     session.wait()
+
+def delete_previous_coco_load():
+     # Define the path to the FiftyOne dataset directory
+    fiftyone_datasets_dir = os.path.expanduser("~/fiftyone")  # Adjust this path if necessary
+
+    # Define the path to the COCO dataset directory
+    coco_dataset_dir = os.path.join(fiftyone_datasets_dir, "coco-2017")  # Update with the correct directory name
+
+    # Check if the directory exists and delete it
+    if os.path.exists(coco_dataset_dir):
+        shutil.rmtree(coco_dataset_dir)
+        print(f"Deleted the dataset directory: {coco_dataset_dir}")
+    else:
+        print(f"Dataset directory not found: {coco_dataset_dir}")
+
+    for dataset in fo.list_datasets():
+        fo.delete_dataset(dataset)

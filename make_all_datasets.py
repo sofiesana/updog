@@ -5,16 +5,19 @@ import fiftyone as fo
 import os
 import shutil
 from transplantation.DatasetObjectExtractor import DatasetObjectExtractor
-from transplantation.utils import import_dataset, view_dataset
+from transplantation.utils import import_dataset, view_dataset, delete_previous_coco_load
 
 import time
 
 
 
 if __name__ == '__main__':
+    ### STEP 0: CLEARING PREVIOUS DOWNLOADED IMAGES (if you haven't run this before)
+    delete_previous_coco_load()
+
     start_time = time.time()
     ### STEP 1: DOWNLOADING THE IMAGES FROM FIFTYONE AND MAKING THE DATASET (only needs to be done once)
-    num_images = 20
+    num_images = 25
     classes = None
     # make a new dataset depending on the classes needed
     if classes is not None:
@@ -32,7 +35,7 @@ if __name__ == '__main__':
             max_samples = num_images,
             classes = classes,
             dataset_name = og_dataset_name,
-            shuffle=True
+            shuffle=False
         )
         dataset.persistent = True
     else:
