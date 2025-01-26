@@ -31,7 +31,7 @@ class ObjectTransplanter():
       return True
     return False
 
-  def run_transplant(self, allow_cut_off=True):
+  def run_transplant(self, allow_cut_off=False):
     image_with_transplant = None
     loc_x, loc_y = self.transplant_location
     is_cut = self.is_cut_off(loc_x, loc_y) # save this somehow if important

@@ -1,13 +1,13 @@
 import os
 import pickle as pkl
 from PIL import Image
-from utils import display, log_entry
+from .utils import display, log_entry, get_next_id
 import json
 import numpy as np
 import matplotlib.pyplot as plt
 
 class ExtractedObject():
-  def __init__(self, log_file_path):
+  def __init__(self, log_file_path=None):
     self.log_file_path = log_file_path
     self.mask = None
     self.mask_with_pixels = None
@@ -18,9 +18,17 @@ class ExtractedObject():
     self.save_location = None
     self.is_setup = False
     self.file_location = None
+    self.obj_id = None
+    self.og_img_dimensions = None
+    self.mask_to_og_ratio = None
 
-  def setup(self, mask, mask_with_pixels, id, class_label, box, box_in_pixels, save_location):
+  def setup(self, image, mask, mask_with_pixels, id, obj_id, class_label, box, box_in_pixels, save_location):
     if not self.is_setup:
+      # print(f"Setting up object with ID: {obj_id}")
+      self.og_img_dimensions = image.shape
+      obj_area = mask.shape[0] * mask.shape[1]
+      img_area = np.prod(image.shape)
+      self.mask_to_og_ratio = obj_area / img_area
       self.mask = mask
       self.mask_with_pixels = mask_with_pixels
       self.id = id
@@ -31,23 +39,34 @@ class ExtractedObject():
       location_folder = os.path.join(self.save_location, f'extracted_objects')
       if not os.path.exists(location_folder):
         os.makedirs(location_folder)
-      self.file_location = os.path.join(location_folder, f'{self.class_label}_{self.id}.pkl')
-      self.obj_id = f'{self.class_label}_{self.id}'
-      self.is_setup = True
+      
+      self.obj_id = obj_id
+      self.file_location = os.path.join(location_folder, f'{self.obj_id}.pkl')
+      
+      #check if file_location already exists
+      if os.path.exists(self.file_location):
+        print(f"Setup failed: Object already extracted")
+        self.is_setup = False
+      else:
+        # print(f"Object setup successful for ID: {obj_id}")
+        self.is_setup = True
     else:
-      print("Setup failed: Object already setup")
+      print(f"Setup failed: Object with ID {obj_id} already setup")
   
   def log_object(self):
+    if self.log_file_path is None:
+      print("No log file path provided")
+      return
     entry = {
       f"{self.obj_id}": {
         "class_label": self.class_label,
         "og_image_id": self.id,
-        "file_location": self.file_location
+        "file_location": self.file_location,
+        "shape": self.mask.shape
       }
     }
 
     log_entry(self.log_file_path, entry, id=self.obj_id)
-    
 
   def save_object(self):
     with open(self.file_location, 'wb') as f:
@@ -80,7 +99,6 @@ class ExtractedObject():
     location = os.path.join(location_folder, f'mask_{self.class_label}_{self.id}.jpg')
     image = Image.fromarray(self.mask)
     image.save(location)
-
 
   def scale_object(self, new_width, new_height):
     self.mask = Image.fromarray(self.mask)
@@ -168,17 +186,12 @@ class ExtractedObject():
     # calculate the percentage of overlap over the other object
     overlap_percentage = np.sum(overlap) / np.sum(blank_image_other) * 100
 
-    print(f"Overlap percentage: {overlap_percentage}")
-
-    # self.plot_masks(blank_image_obj, blank_image_other) # uncomment to plot the masks for debugging
-
-
     # if the overlap is greater than the threshold, return True
     if overlap_percentage > threshold:
-        print(f"Overlapping")
+        # print(f"Overlapping")
         return True
     else:
-        print(f"Not overlapping")
+        # print(f"Not overlapping")
         return False
 
 
