@@ -14,7 +14,7 @@ import time
 if __name__ == '__main__':
     start_time = time.time()
     ### STEP 1: DOWNLOADING THE IMAGES FROM FIFTYONE AND MAKING THE DATASET (only needs to be done once)
-    num_images = 20
+    num_images = 25
     classes = None
     # make a new dataset depending on the classes needed
     if classes is not None:
@@ -51,26 +51,26 @@ if __name__ == '__main__':
     # ### STEP 3: GENERATE THE TRANSPLANTED IMAGES FOR THE GIVEN PARAMETERS
     stride_size = 100
     
-    # ## Dataset 1 (20% overlap allowed): 
-    # ovelap_threshold = 20
-    # # generated dataset name:
-    # new_dataset_name = 'transdata_' + str(ovelap_threshold) + '_' + classes_for_name+ 'n' +str(num_images)
-    # print(new_dataset_name)
-    # # run maker
-    # dm = DatasetMaker(stride_size, save_folder, og_dataset_name, new_dataset_name, allow_overlap=False, overlap_threshold=ovelap_threshold, auto_add=False)
-    # dm.run_dataset_maker()
-    # dm.print_no_of_images_created()
-
-    
-    # ## Dataset 2 (no overlap allowed): 
+    ## Dataset 1 (20% overlap allowed): 
+    ovelap_threshold = 20
     # generated dataset name:
-    ovelap_threshold = 0
     new_dataset_name = 'transdata_' + str(ovelap_threshold) + '_' + classes_for_name+ 'n' +str(num_images)
     print(new_dataset_name)
     # run maker
-    dm = DatasetMaker(stride_size, save_folder, og_dataset_name, new_dataset_name, overlap_threshold=ovelap_threshold, allow_overlap=False, auto_add=False)
+    dm = DatasetMaker(stride_size, save_folder, og_dataset_name, new_dataset_name, allow_overlap=False, overlap_threshold=ovelap_threshold, auto_add=False)
     dm.run_dataset_maker()
     dm.print_no_of_images_created()
+
+    
+    # ## Dataset 2 (no overlap allowed): 
+    # # generated dataset name:
+    # ovelap_threshold = 0
+    # new_dataset_name = 'transdata_' + str(ovelap_threshold) + '_' + classes_for_name+ 'n' +str(num_images)
+    # print(new_dataset_name)
+    # # run maker
+    # dm = DatasetMaker(stride_size, save_folder, og_dataset_name, new_dataset_name, overlap_threshold=ovelap_threshold, allow_overlap=False, auto_add=False)
+    # dm.run_dataset_maker()
+    # dm.print_no_of_images_created()
 
     ## Dataset 3 (all overlap allowed): 
     # ovelap_threshold = 100
