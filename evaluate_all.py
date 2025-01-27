@@ -29,11 +29,11 @@ if __name__ == '__main__':
 
     print(fo.list_datasets())
 
-    ds_og = 'coco-2017-validation-2'
+    ds_og = 'coco-2017-validation-25'
     # ds_trans = 'transdata_20_n2'
-    ds_trans = 'test1'
+    ds_trans = 'transdata_100_n25'
 
-    models_to_test = ['rtdetr-l-coco-torch']
+    models_to_test = ['rtdetr-l-coco-torch', 'yolov8m-world-torch']
 
     for model in models_to_test:
         evaluate_datasets(ds_og, ds_trans, model)
