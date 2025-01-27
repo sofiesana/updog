@@ -41,7 +41,8 @@ if __name__ == '__main__':
     else:
         dataset = fo.load_dataset(og_dataset_name)
 
-    # # view_dataset(dataset)
+    # view_dataset(dataset)
+    # view_dataset(dataset)
 
     ### STEP 2: EXTRACT THE OBJECTS FROM THE DATASET
 
@@ -54,26 +55,15 @@ if __name__ == '__main__':
     # # ### STEP 3: GENERATE THE TRANSPLANTED IMAGES FOR THE GIVEN PARAMETERS
     stride_size = 100
     
-    # # ## Dataset 1 (20% overlap allowed): 
-    # # ovelap_threshold = 20
-    # # # generated dataset name:
-    # # new_dataset_name = 'transdata_' + str(ovelap_threshold) + '_' + classes_for_name+ 'n' +str(num_images)
-    # # print(new_dataset_name)
-    # # # run maker
-    # # dm = DatasetMaker(stride_size, save_folder, og_dataset_name, new_dataset_name, allow_overlap=False, overlap_threshold=ovelap_threshold, auto_add=False)
-    # # dm.run_dataset_maker()
-    # # dm.print_no_of_images_created()
-
-    
-    # # ## Dataset 2 (no overlap allowed): 
-    # generated dataset name:
-    new_dataset_name = 'transdata_' + str(ovelap_threshold) + '_' + classes_for_name+ 'n' +str(num_images)
-    fo.delete_dataset(new_dataset_name)
-    print(new_dataset_name)
-    # run maker
-    dm = DatasetMaker(stride_size, save_folder, og_dataset_name, new_dataset_name, allow_overlap=False, overlap_threshold=ovelap_threshold, auto_add=False)
-    dm.run_dataset_maker()
-    dm.print_no_of_images_created()
+    ## Dataset 1 (20% overlap allowed): 
+    # ovelap_threshold = 20
+    # # generated dataset name:
+    # new_dataset_name = 'transdata_' + str(ovelap_threshold) + '_' + classes_for_name+ 'n' +str(num_images)
+    # print(new_dataset_name)
+    # # run maker
+    # dm = DatasetMaker(stride_size, save_folder, og_dataset_name, new_dataset_name, allow_overlap=False, overlap_threshold=ovelap_threshold, auto_add=False)
+    # dm.run_dataset_maker()
+    # dm.print_no_of_images_created()
 
     
     # ## Dataset 2 (no overlap allowed): 
@@ -86,15 +76,15 @@ if __name__ == '__main__':
     # dm.run_dataset_maker()
     # dm.print_no_of_images_created()
 
-    # ## Dataset 3 (all overlap allowed): 
-    # # ovelap_threshold = 100
-    # # generated dataset name:
-    # # new_dataset_name = 'transdata_' + str(ovelap_threshold) + '_' + classes_for_name+ 'n' +str(num_images)
-    # # print(new_dataset_name)
-    # # # run maker
-    # # dm = DatasetMaker(stride_size, save_folder, og_dataset_name, new_dataset_name, allow_overlap=True, overlap_threshold=ovelap_threshold, auto_add=False)
-    # # dm.run_dataset_maker()
-    # # dm.print_no_of_images_created()
+    ## Dataset 3 (all overlap allowed): 
+    ovelap_threshold = 100
+    # generated dataset name:
+    new_dataset_name = 'transdata_' + str(ovelap_threshold) + '_' + classes_for_name+ 'n' +str(num_images)
+    print(new_dataset_name)
+    # run maker
+    dm = DatasetMaker(stride_size, save_folder, og_dataset_name, new_dataset_name, allow_overlap=True, overlap_threshold=ovelap_threshold, auto_add=False)
+    dm.run_dataset_maker()
+    dm.print_no_of_images_created()
 
     # view_dataset(dataset)
     end_time = time.time()
