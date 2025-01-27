@@ -6,3 +6,13 @@ __pycache__/
 transplantation/just_in_case.py
 output.txt
 transplantation/transplants_with_stride
+ExperimentFourEvaluator.py
+transplantation/outputs/
+please_god.py
+extracted_objects_ids.json
+testing_transplantation_log.json
+transplantation_ids.json
+transplantation/outputs/extracted_objects_log.json
+trial2.py
+transplantation/experimentation.ipynb
+counter.py

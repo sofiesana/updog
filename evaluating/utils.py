@@ -1,4 +1,10 @@
 import numpy as np
+import logging
+import matplotlib.pyplot as plt
+from PIL import Image
+import numpy as np
+from scipy.optimize import linear_sum_assignment
+from fiftyone.utils.iou import compute_bbox_iou
 
 def get_mean_conf(results):
   confidences = results.confs
@@ -21,6 +27,20 @@ def get_bboxs(model_predictions):
 
   return detection_bboxs
 
+def get_metrics(predictions, verbose=False):
+    results = predictions.evaluate_detections("predictions", gt_field="ground_truth", eval_key="eval")
+    
+    mean_conf_og = get_mean_conf(results) # Get confidences
+    f1_score_og = get_f1_score(results) # Get F1 scores
+
+    detection_bboxs = get_bboxs(predictions) # Get bounding boxes
+    detection_classes = get_pred_classes(predictions) # Get list of each detections class
+
+    if verbose:
+        print("Mean Confidence: ", mean_conf_og, " - F1 Score: ", f1_score_og)
+
+
+    return mean_conf_og, f1_score_og, detection_bboxs, detection_classes
 
 def get_pred_classes(model_predictions):
   detection_classes = []
@@ -87,3 +107,44 @@ def get_bbox_matching_score(bboxs_list1, bboxs_list2, classes_list1, classes_lis
 
   return mean_iou
 
+def stfu():
+    logger = logging.getLogger("fiftyone.utils.eval.detection")
+    logger.setLevel(logging.WARNING)
+
+def show_data_image(sample):
+    original_image_path = sample.filepath
+    img = Image.open(original_image_path)
+
+    plt.imshow(img)
+    plt.axis('off')  # Hide axes
+    plt.show(block=True)  # This will block execution until the window is closed
+
+def get_affected_matching_score(original_sample, modified_sample, threshold=0.5):
+    # Extract bounding boxes and their classes from original and modified samples
+    original_boxes = original_sample.predictions.detections
+    modified_boxes = modified_sample.predictions.detections
+
+    # Get the number of boxes
+    num_original_boxes = len(original_boxes)
+    num_modified_boxes = len(modified_boxes)
+
+    # Initialize bipartite graph weights
+    weights = np.zeros((num_modified_boxes, num_original_boxes))
+
+    # Fill the weights with overlap scores
+    for i, mod_box in enumerate(modified_boxes):
+        for j, orig_box in enumerate(original_boxes):
+            if mod_box.label == orig_box.label:
+                weights[i, j] = compute_bbox_iou(orig_box, mod_box)
+
+    # Solve the maximum weight matching problem using the Jonker-Volgenant algorithm
+    row_ind, col_ind = linear_sum_assignment(-weights)
+    max_weight = weights[row_ind, col_ind].sum()
+
+    # Calculate the match score
+    score = max_weight / max(num_modified_boxes - 1, num_original_boxes)
+
+    # Determine if the match score is below the threshold
+    affected = int(score < threshold)
+
+    return score, affected

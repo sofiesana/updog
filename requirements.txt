@@ -8,3 +8,6 @@ torch
 torchvision
 jupyter # for experimentation
 pandas
+scipy
+ultralytics
+tqdm
