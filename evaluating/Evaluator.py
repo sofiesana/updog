@@ -131,7 +131,6 @@ class Evaluator():
             # getting predictions form the model on the original image
             predictions_og = self.og_dataset.match({"filepath": sample.filepath})
             predictions_og.apply_model(model, label_field="predictions")
-            print(predictions_og)
 
             # Get metrics on base image #
             mean_conf_og, f1_score_og, og_detection_bboxs, og_detection_classes = get_metrics(predictions_og)

@@ -42,6 +42,7 @@ if __name__ == '__main__':
         dataset = fo.load_dataset(og_dataset_name)
 
     # view_dataset(dataset)
+    # view_dataset(dataset)
 
     ### STEP 2: EXTRACT THE OBJECTS FROM THE DATASET
 
